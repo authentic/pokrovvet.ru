@@ -28,7 +28,7 @@ gem 'mysql'
 # and rake tasks are available in development mode:
 group :development do
  gem 'rspec-rails'
-  gem 'heroku'
+ gem 'heroku'
 end
 group :development do
  gem 'rspec'
