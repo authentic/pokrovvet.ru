@@ -38,5 +38,6 @@ module PokrovvetRu
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.autoload_paths += %W(#{config.root}/app/models/ckeditor)
   end
 end

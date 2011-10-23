@@ -1,17 +1,21 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.1.0'
+gem 'rake', '0.9.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql'
+gem 'mysql2'
+gem "simple-navigation", "~> 3.5.0"
+gem 'ckeditor', '3.6.1'
+gem 'paperclip', '2.3.15'
 
 # Use unicorn as the web server
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
@@ -27,9 +31,11 @@ gem 'mysql'
 # put test-only gems in this group so their generators
 # and rake tasks are available in development mode:
 group :development do
- gem 'rspec-rails'
- gem 'heroku'
+  gem 'rspec-rails', '2.6.1'
+  gem 'mongrel', '1.2.0.pre2'
+  gem "unicorn", "~> 4.0.1"
 end
-group :development do
- gem 'rspec'
- end
+group :test do
+  gem 'rspec-rails', '2.6.1'
+  gem 'webrat', '0.7.1'
+end

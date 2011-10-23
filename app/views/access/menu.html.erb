@@ -1,0 +1,17 @@
+<% @page_title="Админ меню" %>
+  <hr class="space"/>
+
+<div class="span-9 box" box="yes"><%= link_to("Управление информацией", :controller => 'subjects', :class=>'button') %>
+  <ul>
+    <li>создание разделов сайта</li>
+    <li>добавление, редактирование и удаление страниц</li>
+    <li>ввод и редактирование информации</li>
+    </ul>
+</div>
+<div class="span-6 box" box="yes"><%= link_to("Управление администраторами", :controller => 'admin_users') %> <ul>
+    <li>создание и удаление администраторов сайта</li>
+
+  </ul> <hr class="space"/></div>
+<div class="span-6 box last" box="yes">вы вошли как: <%= session[:username] %> <hr class="space"/><%= link_to("Выход", :action => 'logout') %><hr class="space"/><hr class="space"/></div>
+
+

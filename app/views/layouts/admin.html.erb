@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Храм Покрова Пресвятой Богородицы (Казачий хутор Ветютнев)::: <%= @page_title || '' %> </title>
+  <%= csrf_meta_tag %>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Храм Покрова Пресвятой Богородицы в хуторе Ветютнев Фроловского района Волгоградской области"/>
+  <meta name="keywords" content="massanutten,virginia,incorporation,town,boundaries,town map,community,infrastructure,town police,law enforcement,town government,town administration,town budget"/>
+  <%= render 'layouts/stylesheets' %>
+  <%= stylesheet_link_tag('admin', :media=>'screen') %>
+  <%= javascript_include_tag :defaults %>  <%= javascript_include_tag :ckeditor %>
+  <script language="javascript">
+      $(function() {
+          // We create rounded corners for all divisions that have the attribute "box".
+          $("[box]").corner("round 10px");
+          $('div.inner').corner("round 10px");
+          $('div.outer').corner("bottom 10px");
+
+      });
+  </script>
+ </head>
+<body>
+<div class="container">    <hr class="space"/>
+  <div class="span-24 last header" box='yes' >
+    <h1 class="alt">Храм Покрова Пресвятой Богородицы</h1>
+    <h2 class="alt">Административный раздел</h2>
+    <!-- end .header --></div>
+
+   <div class="span-24 last content">
+    <% if !flash[:notice].blank? %>
+        <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+
+      <%= yield %>
+
+    <!-- end .content --></div>
+
+
+  <%= render 'layouts/footer' %>
+  <!-- end .container --></div>
+</body>
+</html>

@@ -1,4 +1,19 @@
 PokrovvetRu::Application.routes.draw do
+
+
+  root :to => "home#index"
+    match 'admin', :to=> 'access#menu'
+     match 'show/:id', :to => 'public#show'
+
+  Rails.application.routes.draw do
+  get "photo/index"
+
+    namespace :ckeditor, :only => [:index, :create, :destroy] do
+      resources :pictures
+      resources :attachment_files
+    end
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -47,12 +62,12 @@ PokrovvetRu::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index.html.
+  # just remember to delete public/index_old.html.
   # root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+   match ':controller(/:action(/:id(.:format)))'
 end

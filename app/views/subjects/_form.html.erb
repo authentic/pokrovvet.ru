@@ -1,0 +1,10 @@
+<%= error_messages_for(@subject) %>
+
+     <div class="container"><%= f.label(:name) %>
+     <%= f.text_field(:name) %></div>
+
+     <div class="container"><%= f.label(:position)%>
+   <%= f.select(:position, 1..@subject_count) %></div>
+
+     <div class="container"><%= f.label(:visible)%>
+     <%= f.check_box(:visible) %></div>

@@ -1,0 +1,80 @@
+html {
+    background-color: #FFF;
+}
+
+body {
+    background-color: transparent;
+    text-align: center;
+}
+
+.container {
+    margin: 18px auto 0 auto;
+    height: 576px;
+    background: #f0f2f1 url('/images/homepage.jpg') no-repeat;
+}
+
+.content {
+    height: 536px;
+}
+
+.border1 {
+    border: 1px solid #ccc;
+}
+
+a.button,
+button {
+    display: block;
+    cursor: pointer;
+    width: 140px;
+    overflow: visible;
+    background-color: #09f;
+    color: #fff;
+     font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    padding: 2px 5px 2px 5px; /* Links */
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #2bf;
+    border-right-color: #08e;
+    border-bottom-color: #07d;
+    border-left-color: #1af;
+    border-radius: 5px;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+
+}
+
+
+
+a.button:hover,
+a.button:focus {
+    background-color: #06c;
+    border-top-color: #28e;
+    border-right-color: #05b;
+    border-bottom-color: #04a;
+    border-left-color: #17d;
+}
+
+a.button:active {
+    background-color: #039;
+    border-top-color: #25b;
+    border-right-color: #14a;
+    border-bottom-color: #017;
+    border-left-color: #028;
+}
+a.button[href$=".pdf"]  {background-image: none;}
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active,
+a.button:focus {
+    color: #fff;
+    text-decoration: none;
+}
+ .footer {text-align: center;
+
+        font-size: 11px;
+     background-color: fff;
+}

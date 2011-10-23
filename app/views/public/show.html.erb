@@ -1,0 +1,15 @@
+<% @page_title=@page.name %>
+<h2 class="alt"><%= @page.name %></h2>
+
+<% @page.sections.visible.sorted.each do |section| %>
+
+<section class="<%=section.name%>">
+       <% case section.content_type
+       when 'HTML' %>
+         <%= (section.content).html_safe %>
+    <% when 'text' %>
+        <p><%= section.content %></p>
+    <% end %>
+  </section>
+<% end %>
+

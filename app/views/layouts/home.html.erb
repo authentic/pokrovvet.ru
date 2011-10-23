@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Town Incorporation Of Massanutten</title>
+  <%= csrf_meta_tag %>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1"/>
+  <meta name="description" content="This website reports on the feasibility of incorporating the community of Massanutten, Virginia into town. The website is designed to provide information on what town incorporation in Virginia is all about and what Massanutten would look like if it became a town to include community, infrastructure, law enforcement, parks, government, and budget aspects"/>
+  <meta name="keywords" content="massanutten,virginia,incorporation,town,boundaries,town map,community,infrastructure,town police,law enforcement,town government,town administration,town budget"/>
+  <meta name="author" content="Gene Hauze">
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=8" />-->
+  <!--<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />-->
+  <meta name="robots" content="index, nofollow"/>
+  <meta name="robots" content="noarchive"/>
+
+  <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push([
+          '_setAccount', 'UA-17444458-1']);
+      _gaq.push([
+          '_trackPageview']);
+      (
+              function() {
+                  var ga = document.createElement('script');
+                  ga.type = 'text/javascript';
+                  ga.async = true;
+                  ga.src = (
+                          'https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                  var s = document.getElementsByTagName('script')[0];
+                  s.parentNode.insertBefore(ga, s);
+              })();
+  </script>
+
+  <%= render 'layouts/stylesheets' %>
+  <%= stylesheet_link_tag('home', :media=>'screen') %>
+  <script language="javascript">
+      $(function() {
+          // We create rounded corners for all divisions that have the attribute "box".
+          $("[box]").corner("8px");
+          $('div.inner').corner("round 8px");
+          $('div.outer').corner("10px");
+
+      });
+  </script>
+</head>
+<body>
+<div class="container border1 " box="yes">
+  <div class="span-24 last">
+    <div class="span-24 content last">
+      <hr class="space"/>
+
+      <br><br>
+    </div>
+    <div class="homeNav prepend-2 span-22 last">
+      <div class="span-5"><%= link_to("View Final Report", {:controller => 'public', :action=>'show', :id =>"forward"}, :class=>'button') %></div>
+      <div class="span-5"><%= link_to("View Study Videos", {:controller=>'public', :action=>'show', :id=>'executive_summary'}, :class=>'button') %></div>
+      <div class="span-5"><%= link_to("Print Final Report", "/ckeditor_assets/attachments/261/town_incorporation_study_final_report.pdf", :target=>"_blank", :class=>'button') %></div>
+      <div class="span-5 last"><%= link_to("Print Summary", "/ckeditor_assets/attachments/262/town_incorporation_study_final_report_summary.pdf", :target=>"_blank", :class=>'button') %></div>
+    </div>
+  </div>
+
+  <%= render 'layouts/footer' %>
+  <!-- end container --></div>
+
+</body>
+</html>

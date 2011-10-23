@@ -1,0 +1,37 @@
+<% @page_title="Sections List" %>
+<%= link_to("<< Back to Pages List",{:controller => 'pages',:action=> 'list', :subject_id => @page.subject_id}, :class => 'back-link') %>
+<%= link_to("<< Back to Subject List", {:controller => 'subjects', :action=> 'list'}, :class => 'back-link') %>
+<div class="section list">
+  <h2>Sections</h2>
+  <%= link_to("Add New Section",{:action=>'new', :page_id => @page.id},:class=>'button') %> <br /> <br />
+
+  <table class="listing" summary="Section list">
+    <thead>
+    <tr class="header">
+      <th>Position</th>
+      <th>Section</th>
+      <th>Visibility</th>
+      <th>Content type</th>
+      <th>Page_id</th>
+      <th>Actions</th>
+    </tr></thead>
+    <tbody>
+    <% @sections.each do |section| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= section.position %></td>
+      <td><%= section.name %></td>
+      <td class="center"><%= status_tag(section.visible) %></td>
+      <td class="center"><%= section.content_type %></td>
+      <td class="center"><%= section.page.name %></td>
+      <td class="actions">
+
+        <%= link_to("Show",{:action=>'show',:id=>section.id, :page_id => @page.id},:class=>'button') %>
+        <%= link_to("Edit",{:action=>'edit',:id=>section.id, :page_id => @page.id},:class=> 'button') %>
+        <%= link_to("Delete",{:action=>'delete',:id=>section.id, :page_id => @page.id},:class=> 'button') %>
+      </td>
+    </tr>
+        <% end %>
+        </tbody>
+  </table>
+  <div class="pluralizenote"><%= pluralize(@sections.size, 'section') %> found</div>
+</div>

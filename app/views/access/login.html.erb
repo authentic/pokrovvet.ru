@@ -1,0 +1,13 @@
+<% @page_title= "Admin Login" %>  <hr class="space"/>
+
+<div class="span-12 info push-6">
+      <%= form_tag(:action=> 'attempt_login') do %>
+          <div class="container"><%= label_tag 'Логин' %><%= text_field_tag(:username) %></div>
+          <div class="container"><%= label_tag 'Пароль' %><%= password_field_tag(:password) %></div>
+          <div class="button-container"><%= submit_tag("Вход") %></div>
+
+</div>
+
+   
+<% end %>
+

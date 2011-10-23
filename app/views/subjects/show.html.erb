@@ -1,0 +1,31 @@
+<% @page_title="Subject Details" %>
+<%= link_to("<< Back to Menu", {:controller => 'access', :action=> 'menu'}, :class => 'back-link') %>
+<%= link_to("<< Back to Subjects List", {:action=>'list'}, :class=>'back-link')%>
+
+<div class="subject show">
+  <h2>Show Subject</h2>
+
+  <table summary="Subject detail view">
+  <tbody><tr>
+    <th>Name</th>
+    <td><%= @subject.name %></td>
+  </tr>
+  <tr>
+    <th>Position</th>
+    <td><%= @subject.position %></td>
+  </tr>
+  <tr>
+  <th>Visibility</th>
+    <td><%= @subject.visible ? 'true' :'false'%></td>
+  </tr>
+  <tr>
+    <th>Created</th>
+    <td><%= @subject.created_at %></td>
+  </tr>
+  <tr>
+    <th>Updated</th>
+    <td><%= @subject.updated_at %></td>
+  </tr>
+    </tbody>
+  </table>
+</div>

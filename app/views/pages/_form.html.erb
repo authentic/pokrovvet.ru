@@ -1,0 +1,14 @@
+<%= error_messages_for(@page) %>
+
+<div class="container"><%= f.label(:subject_id, "Subject")%>
+    <%= f.select(:subject_id, @subjects.collect {|s| [s.name, s.id]}) %></div>
+
+   <div class="container"><%= f.label(:name)%>
+    <%= f.text_field(:name) %></div>
+
+    <div class="container"><%= f.label(:permalink)%>
+    <%= f.text_field(:permalink) %></div>
+    <div class="container"><%= f.label(:position)%>
+    <%= f.select(:position, 1..@page_count) %></div>
+    <div class="container"><%= f.label(:visible)%>
+    <%= f.check_box(:visible) %></div>
