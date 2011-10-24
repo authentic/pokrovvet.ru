@@ -151,7 +151,6 @@ DEPENDENCIES
   mysql2
   paperclip (= 2.3.15)
   rails (= 3.1.0)
-  rake (= 0.9.2)
   rspec-rails (= 2.6.1)
   simple-navigation (~> 3.5.0)
   unicorn (~> 4.0.1)

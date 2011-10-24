@@ -9,11 +9,12 @@ development:
  adapter: mysql2
  encoding: utf8
  reconnect: false
- database: pokrovvet_oh_development
+ database: development
  pool: 5
- username: olgahauze
- password: gideon
+ username:
+ password:
  socket: /var/run/mysqld/mysqld.sock
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,18 +23,18 @@ test:
  adapter: mysql2
  encoding: utf8
  reconnect: false
- database: pokrovvet.ru_test
+ database: test
  pool: 5
  username: root
  password:
- host: localhost
+ socket: /var/run/mysqld/mysqld.sock
 
 production:
  adapter: mysql2
  encoding: utf8
  reconnect: false
- database: townofma_pokrovvet_production
+ database: production
  pool: 5
- username: townofma_pokrov
- password: 5346Trevino
- host: /tmp/mysql.sock
+ username:
+ password:
+ socket: /var/run/mysqld/mysqld.sock
