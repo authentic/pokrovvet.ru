@@ -1,11 +1,19 @@
 PokrovvetRu::Application.routes.draw do
 
 
+
+
+  get "home/new"
+
   root :to => "home#index"
     match 'admin', :to=> 'access#menu'
      match 'show/:id', :to => 'public#show'
-
+ match '/signup', :to =>'users#new'
   Rails.application.routes.draw do
+  get "home/new"
+
+  get "users/new"
+
   get "photo/index"
 
     namespace :ckeditor, :only => [:index, :create, :destroy] do

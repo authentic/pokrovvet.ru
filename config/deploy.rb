@@ -6,7 +6,7 @@ require 'bundler/capistrano'
 #	Application
 #############################################################
 set :application, "pokrovvet.ru"
-set :deploy_to, "/home/townofma/#{application}"
+set :deploy_to, "/home/townofma/public_html/pokrovvetapp"
 
 #############################################################
 #	Settings
@@ -14,6 +14,7 @@ set :deploy_to, "/home/townofma/#{application}"
 
 default_run_options[:pty] = true
 set :use_sudo, false
+ssh_options[:forward_agent] = true
 ssh_options[:port] = 7822
 ssh_options[:keys] = %w(~/.ssh/id_dsa)
 set :scm_verbose, true
