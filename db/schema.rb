@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111001140652) do
+ActiveRecord::Schema.define(:version => 20111025223020) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
@@ -59,6 +59,13 @@ ActiveRecord::Schema.define(:version => 20111001140652) do
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
   add_index "pages", ["subject_id"], :name => "index_pages_on_subject_id"
+
+  create_table "public_users", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "section_edits", :force => true do |t|
     t.integer  "admin_user_id"

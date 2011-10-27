@@ -76,3 +76,19 @@ class AdminUser < ActiveRecord::Base
 
 
 end
+
+# == Schema Information
+#
+# Table name: admin_users
+#
+#  id              :integer(4)      not null, primary key
+#  first_name      :string(25)
+#  last_name       :string(50)
+#  email           :string(100)     default(""), not null
+#  hashed_password :string(80)
+#  created_at      :datetime
+#  updated_at      :datetime
+#  username        :string(25)
+#  salt            :string(80)
+#
+

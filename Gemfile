@@ -34,6 +34,7 @@ group :development do
   gem 'rspec-rails', '2.6.1'
   gem 'mongrel', '1.2.0.pre2'
   gem "unicorn", "~> 4.0.1"
+  gem 'annotate', '2.4.0'
 end
 group :test do
   gem 'rspec-rails', '2.6.1'

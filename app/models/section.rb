@@ -25,3 +25,19 @@ class Section < ActiveRecord::Base
     "sections.page_id = #{page_id.to_i}"
   end
 end
+
+# == Schema Information
+#
+# Table name: sections
+#
+#  id           :integer(4)      not null, primary key
+#  page_id      :integer(4)
+#  name         :string(255)
+#  position     :integer(4)
+#  visible      :boolean(1)      default(FALSE)
+#  content_type :string(255)
+#  content      :text
+#  created_at   :datetime
+#  updated_at   :datetime
+#
+

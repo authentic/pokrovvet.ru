@@ -18,3 +18,16 @@ class Subject < ActiveRecord::Base
   scope :sorted, order('subjects.position ASC')
   scope :search, lambda {|query| where(["name LIKE ?", "%#{query}%"])}
 end
+
+# == Schema Information
+#
+# Table name: subjects
+#
+#  id         :integer(4)      not null, primary key
+#  name       :string(255)
+#  position   :integer(4)
+#  visible    :boolean(1)      default(FALSE)
+#  created_at :datetime
+#  updated_at :datetime
+#
+
