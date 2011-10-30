@@ -3,8 +3,6 @@ PokrovvetRu::Application.routes.draw do
 
 
 
-  get "home/new"
-
   root :to => "home#index"
     match 'admin', :to=> 'access#menu'
      match 'show/:id', :to => 'public#show'

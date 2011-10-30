@@ -5,8 +5,8 @@ require 'bundler/capistrano'
 #############################################################
 #	Application
 #############################################################
-set :application, "pokrovvet.ru"
-set :deploy_to, "/home/townofma/public_html/pokrovvetapp"
+set :application, "pokrovvetapp"
+set :deploy_to, "/home/townofma/pokrovvetapp"
 
 #############################################################
 #	Settings
