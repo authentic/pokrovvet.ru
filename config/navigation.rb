@@ -50,88 +50,83 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
 
-    home_primary.item :home, 'Главная', '/show/home'  do |primary|
+    home_primary.item :home, 'Главная', '/show/home' do |primary|
 
-    primary.item :history, 'История', '/show/history' do |sub_nav|
-      sub_nav.item :khutor_vetjutnev, 'Казачий хутор Ветютнев', '/show/khutor_vetjutnev'
-      sub_nav.item :church_of_the_protection_of_the_Most_Holy_Theotokos, 'Храм Покрова Пресвятой Богородицы', '/show/church_of_the_protection_of_the_Most_Holy_Theotokos'
-      sub_nav.item :church_of_Our_Lady_of_the_Don, 'Храм Донской иконы Божией Матери', '/show/church_of_Our_Lady_of_the_Don'
-    end
-    primary.item :deanery_frolovskoe, 'Благочиние Фроловского Округа', '/show/deanery_frolovskoe' do |sub_nav|
-      sub_nav.item :churches, 'Храмы Фроловского благочиния', '/show/churches'
-      sub_nav.item :priesthood, 'Духовенство', '/show/priesthood'
-      sub_nav.item :information, 'Сообщения', '/show/information'
-      sub_nav.item :orders, 'Распоряжения', '/show/orders'
-      sub_nav.item :documents, 'Документы', '/show/documents'
-
-    end
-
-
-
-    primary.item :our_parish, 'Наш приход', '/show/our_parish' do |sub_nav|
-
-      sub_nav.item :news, 'События прихода', '/show/news'
-
-      sub_nav.item :library, 'Библиотека при храме', '/show/library' do |sub_sub_nav|
-       sub_sub_nav.item :books, 'Книги', '/show/books'
-       sub_sub_nav.item :magazines, 'Журналы', '/show/magazines'
+      primary.item :history, 'История', '/show/history' do |sub_nav|
+        sub_nav.item :khutor_vetjutnev, 'Казачий хутор Ветютнев', '/show/khutor_vetjutnev'
+        sub_nav.item :church_of_the_protection_of_the_Most_Holy_Theotokos, 'Храм Покрова Пресвятой Богородицы', '/show/church_of_the_protection_of_the_Most_Holy_Theotokos'
+        sub_nav.item :church_of_Our_Lady_of_the_Don, 'Храм Донской иконы Божией Матери', '/show/church_of_Our_Lady_of_the_Don'
+      end
+      primary.item :deanery_frolovskoe, 'Благочиние Фроловского Округа', '/show/deanery_frolovskoe' do |sub_nav|
+        sub_nav.item :churches, 'Храмы Фроловского благочиния', '/show/churches'
+        sub_nav.item :priesthood, 'Духовенство', '/show/priesthood'
+        sub_nav.item :information, 'Сообщения', '/show/information'
+        sub_nav.item :orders, 'Распоряжения', '/show/orders'
+        sub_nav.item :documents, 'Документы', '/show/documents'
 
       end
 
-      sub_nav.item :calendars, 'Календари', '/show/calendars' do |sub_sub_nav|
-        sub_sub_nav.item :orthodox_calendar, 'Православный календарь', '/show/orthodox_calendar'
-        sub_sub_nav.item :church_calendar, 'Календарь богослужений и мероприятий храма', '/show/church_calendar'
+
+      primary.item :our_parish, 'Наш приход', '/show/our_parish' do |sub_nav|
+
+        sub_nav.item :news, 'События прихода', '/show/news'
+
+        sub_nav.item :library, 'Библиотека при храме', '/show/library' do |sub_sub_nav|
+          sub_sub_nav.item :books, 'Книги', '/show/books'
+          sub_sub_nav.item :magazines, 'Журналы', '/show/magazines'
+
+        end
+
+        sub_nav.item :calendars, 'Календари', '/show/calendars' do |sub_sub_nav|
+          sub_sub_nav.item :orthodox_calendar, 'Православный календарь', '/show/orthodox_calendar'
+          sub_sub_nav.item :church_calendar, 'Календарь богослужений и мероприятий храма', '/show/church_calendar'
+        end
+        sub_nav.item :pilgrimage, 'Паломничества', '/show/pilgrimage'
+        sub_nav.item :ask_questions, 'Вопрос Настоятелю', '/show/ask_questions'
+        sub_nav.item :commemoration, 'Поминовение', '/show/commemoration'
+
       end
-      sub_nav.item :pilgrimage, 'Паломничества', '/show/pilgrimage'
-      sub_nav.item :ask_questions, 'Вопрос Настоятелю', '/show/ask_questions'
-       sub_nav.item :commemoration, 'Поминовение', '/show/commemoration'
+      primary.item :our_projects, 'Наши проекты', '/show/our_projects' do |sub_nav|
+
+        sub_nav.item :publishing, 'Издательства', '/show/publishing' do |sub_sub_nav|
+          sub_sub_nav.item :newspaper_choose_life, 'Газета "Избери жизнь"', '/show/newspaper_choose_life'
+          sub_sub_nav.item :newspaper_news_deanery_frolovskoe, 'Газета "Новости Фроловского благочиния"', '/show/newspaper_news_deanery_frolovskoe'
+        end
+
+        sub_nav.item :orthodox_housewife, 'Православная хозяйка', '/show/orthodox_housewife' do |sub_sub_nav|
+          sub_sub_nav.item :recipes, 'Рецепты православной кухни', '/show/recipes'
+
+        end
+        sub_nav.item :military_patriotic_club, 'Военно-патриотический клуб', '/show/military_patriotic_club'
+        sub_nav.item :collector, 'Коллекционер', '/show/collector'
+      end
+
+
+      #  primary.item :key_1, 'name', url, options
+
+      # Add an item which has a sub navigation (same params, but with block)
+      #   primary.item :key_2, 'name', url, options do |sub_nav|
+      # Add an item to the sub navigation (same params again)
+      #     sub_nav.item :key_2_1, 'name', url, options
+      #   end
+
+      # You can also specify a condition-proc that needs to be fullfilled to display an item.
+      # Conditions are part of the options. They are evaluated in the context of the views,
+      # thus you can use all the methods and vars you have available in the views.
+
+
+      # primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
+      # primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
+
+      # you can also specify a css id or class to attach to this particular level
+      # works for all levels of the menu
+      # primary.dom_id = ''
+      #  primary.dom_class = ''
+
+      # You can turn off auto highlighting for a specific level
+      # primary.auto_highlight = false
 
     end
-    primary.item :our_projects, 'Наши проекты', '/show/our_projects' do |sub_nav|
-
-      sub_nav.item :publishing, 'Издательства', '/show/publishing' do |sub_sub_nav|
-        sub_sub_nav.item :newspaper_choose_life, 'Газета "Избери жизнь"', '/show/newspaper_choose_life'
-        sub_sub_nav.item :newspaper_news_deanery_frolovskoe, 'Газета "Новости Фроловского благочиния"', '/show/newspaper_news_deanery_frolovskoe'
-      end
-
-      sub_nav.item :orthodox_housewife, 'Православная хозяйка', '/show/orthodox_housewife' do |sub_sub_nav|
-        sub_sub_nav.item :recipes, 'Рецепты православной кухни', '/show/recipes'
-
-      end
-      sub_nav.item :military_patriotic_club, 'Военно-патриотический клуб', '/show/military_patriotic_club'
-      sub_nav.item :collector, 'Коллекционер', '/show/collector'
-    end
-
-
-
-
-
-
-    #  primary.item :key_1, 'name', url, options
-
-    # Add an item which has a sub navigation (same params, but with block)
-    #   primary.item :key_2, 'name', url, options do |sub_nav|
-    # Add an item to the sub navigation (same params again)
-    #     sub_nav.item :key_2_1, 'name', url, options
-    #   end
-
-    # You can also specify a condition-proc that needs to be fullfilled to display an item.
-    # Conditions are part of the options. They are evaluated in the context of the views,
-    # thus you can use all the methods and vars you have available in the views.
-
-
-    # primary.item :key_3, 'Admin', url, :class => 'special', :if => Proc.new { current_user.admin? }
-    # primary.item :key_4, 'Account', url, :unless => Proc.new { logged_in? }
-
-    # you can also specify a css id or class to attach to this particular level
-    # works for all levels of the menu
-    # primary.dom_id = ''
-    #  primary.dom_class = ''
-
-    # You can turn off auto highlighting for a specific level
-    # primary.auto_highlight = false
 
   end
-
 end
- end
