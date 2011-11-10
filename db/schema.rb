@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111025223020) do
+ActiveRecord::Schema.define(:version => 20111110010316) do
 
   create_table "admin_users", :force => true do |t|
     t.string   "first_name",      :limit => 25
@@ -65,7 +65,10 @@ ActiveRecord::Schema.define(:version => 20111025223020) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "encrypted_password"
   end
+
+  add_index "public_users", ["email"], :name => "index_public_users_on_email", :unique => true
 
   create_table "section_edits", :force => true do |t|
     t.integer  "admin_user_id"

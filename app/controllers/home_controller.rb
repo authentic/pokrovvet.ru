@@ -1,5 +1,10 @@
 class HomeController < ApplicationController
- layout 'public'
+  layout 'public'
+
+  def index
+
+  end
+
   def new
   end
 

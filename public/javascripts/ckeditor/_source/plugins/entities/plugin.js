@@ -213,7 +213,7 @@ CKEDITOR.config.entities_latin = true;
 
 /**
  * Whether to convert some symbols, mathematical symbols, and Greek letters to
- * HTML entities. This may be more relevant for users typing text written in Greek.
+ * HTML entities. This may be more relevant for public_users typing text written in Greek.
  * The list of entities can be found at the
  * <a href="http://www.w3.org/TR/html4/sgml/entities.html#h-24.3.1">W3C HTML 4.01 Specification, section 24.3.1</a>.
  * @name CKEDITOR.config.entities_greek

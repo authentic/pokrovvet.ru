@@ -1,6 +1,6 @@
 PokrovvetRu::Application.routes.draw do
 
-
+ resources :public_users
 
 
   root :to => "home#index"
@@ -10,9 +10,9 @@ PokrovvetRu::Application.routes.draw do
   Rails.application.routes.draw do
   get "home/new"
 
-  get "users/new"
 
-  get "photo/index"
+
+
 
     namespace :ckeditor, :only => [:index, :create, :destroy] do
       resources :pictures

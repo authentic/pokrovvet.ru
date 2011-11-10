@@ -72,7 +72,7 @@
     <div class="yui3-u" id="extra">
       <div class="content">
 
-
+                 <%= debug(params)if Rails.env.development? %>
         <!--    <div class="sidebox">
                   <div class="hd">
                     <h2 class="no-toc">Православная газета</h2>
@@ -164,6 +164,7 @@
             Церкви.</p>
         </div>
       </div>
+      <%= debug(params)if Rails.env.development? %>
     </div>
   </div>
 
