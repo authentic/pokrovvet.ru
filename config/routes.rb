@@ -1,20 +1,14 @@
 PokrovvetRu::Application.routes.draw do
 
- resources :public_users
+  resources :public_users
 
 
   root :to => "home#index"
-    match 'admin', :to=> 'access#menu'
-     match 'show/:id', :to => 'public#show'
- match '/signup', :to =>'users#new'
+  match 'admin', :to=> 'access#menu'
+  match 'show/:id', :to => 'public#show'
+  match '/signup', :to =>'public_users#new'
   Rails.application.routes.draw do
-  get "home/new"
-
-
-
-
-
-    namespace :ckeditor, :only => [:index, :create, :destroy] do
+     namespace :ckeditor, :only => [:index, :create, :destroy] do
       resources :pictures
       resources :attachment_files
     end
@@ -75,5 +69,5 @@ PokrovvetRu::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-   match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end
