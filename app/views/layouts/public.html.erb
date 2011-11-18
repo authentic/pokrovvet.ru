@@ -9,7 +9,17 @@
   <meta name="robots" content="noarchive"/>
   <%= render 'layouts/stylesheetsn' %>
   <%= stylesheet_link_tag('public', :media=>'screen') %>   <%= stylesheet_link_tag('coin-slider-styles.css', :media=>'screen') %>
+ <script language="JavaScript">
+    $(document).ready(function() {
 
+	$('.shuffle').randomImage({path: '/images/'});
+	$('a:first').click(function() {
+		location.reload();
+		return false;
+	});
+
+});
+</script>
 </head>
 
 <body class="yui3-skin-sam">
@@ -26,145 +36,86 @@
       <div class="yui3-u-1">
         <%= image_tag('title.jpg', :alt=>"") %> </div>
       <div class="yui3-u-1">
-        <div id='coin-slider'>
-          <%= image_tag('collage2001.jpg', :alt=>"") %>
-          <%= image_tag('collage2005.jpg', :alt=>"") %>
-          <%= image_tag('collage2006.jpg', :alt=>"") %>
-          <%= image_tag('collage2007.jpg', :alt=>"") %>
-          <%= image_tag('collage2008.jpg', :alt=>"") %>
-          <%= image_tag('collage2008_2.jpg', :alt=>"") %>
-        </div>
 
 
+        <div id="slider"><img class="shuffle" src="" alt="">
+
+			<!--<ul>
+				<li><%= image_tag('collage2001.jpg', :alt=>"") %></li>
+				&lt;!&ndash;<li><%= image_tag('collage2005.jpg', :alt=>"") %></li>
+				<li><%= image_tag('collage2006.jpg', :alt=>"") %></li>
+				<li> <%= image_tag('collage2007.jpg', :alt=>"") %></li>
+				<li><%= image_tag('collage2008.jpg', :alt=>"") %></li>
+              <li><%= image_tag('collage2008_2.jpg', :alt=>"") %></li>&ndash;&gt;
+			</ul>-->
+		</div>
       </div>
-
-
     </header>
     <div class="yui3-u-1 alt headnote">
-      <p>Русская Православная Церковь Московский Патриархат Волгоградская епархия</p>
+      <p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская епархия</p>
     </div>
   </div>
 
   <div id="top_navigation" class="yui3-u-1"><%= render_navigation(:level => 2) %> </div>
 
 
-  <!-- <div id="breadcrumbs" class="yui3-u-2-3">
-      <%= render_navigation :renderer => :breadcrumbs, :join_with => ' &raquo; ' %>
+  <!--<div id="breadcrumbs" class="yui3-u-2-3">
+<%= render_navigation :renderer => :breadcrumbs, :join_with => ' &raquo; ' %>
     </div>
     <div class="added yui3-u-1-3">
-     add info
+
     </div>-->
 
 
   <div class="yui3-g" id="layout">
 
     <div class="yui3-u" id="nav">
-      <div class="content">
+      <div class="content intro">
         <div id="sub_navigation"> <%= render_navigation(:level => 3..4) %></div>
 
       </div>
     </div>
 
     <div class="yui3-u" id="main">
-      <div class="content"><%= yield %> </div>
-    </div>
-
-    <div class="yui3-u" id="extra">
       <div class="content">
+        <div id="breadcrumbs" class="yui3-u-2-3">
+<%= render_navigation :renderer => :breadcrumbs, :join_with => ' &raquo; ' %>
+    </div><%= yield %> </div>
 
-                 <%= debug(params)if Rails.env.development? %>
-        <!--    <div class="sidebox">
-                  <div class="hd">
-                    <h2 class="no-toc">Православная газета</h2>
-                  </div>
-
-                  <div class="bd">
-                    <ul class="examples">
-
-
-                      <li data-description="Creating left navigation using the MenuNav Node Plugin.">
-                        <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Basic Left Nav</a>
-
-                      </li>
-
-
-                      <li data-description="Creating top navigation using the MenuNav Node Plugin">
-                        <a href="../node-menunav/node-menunav-2.html">Basic Top Nav</a>
-                      </li>
-
-
-                      <li data-description="Creating menu button navigation using the MenuNav Node Plugin">
-                        <a href="../node-menunav/node-menunav-3.html">Menu Button Top Nav</a>
-                      </li>
-
-
-                      <li data-description="Creating split button navigation using the MenuNav Node Plugin">
-
-                        <a href="../node-menunav/node-menunav-4.html">Split Button Top Nav</a>
-                      </li>
-
-
-                      <li data-description="Adding shadows to submenus of a left nav using the MenuNav Node Plugin">
-                        <a href="../node-menunav/node-menunav-5.html">Left Nav with Submenus with Shadows</a>
-                      </li>
-
-
-                      <li data-description="Adding rounded corners to submenus of a left nav using the MenuNav Node Plugin">
-                        <a href="../node-menunav/node-menunav-6.html">Left Nav With Submenus With Rounded Corners</a>
-
-                      </li>
-
-
-                      <li data-description="Skining a menu built using the MenuNav Node Plugin to look like the menus on Flickr">
-                        <a href="../node-menunav/node-menunav-7.html">Skinning Menus Created Using the MenuNav Node Plugin</a>
-                      </li>
-
-
-                    </ul>
-                  </div>
-                </div>
-        -->
-        <!--
-        <script language="Javascript">
-            var d = new Date();
-            var to = -4 - d.getTimezoneOffset() / 60;
-            document.write('<script language="Javascript" src="http://script.days.ru/calendar.php?tmshift=' + to + '"><\/script>');
-        </script>-->
-      </div>
     </div>
+
+
   </div>
 
   <div id="ft">
     <div class="yui3-g">
       <div class="yui3-u-1-4">
         <div class="content">
-          xcgvzfd
+          <p><a href="http://www.pravoslavie.ru/" target="_blank"><img class="aligncenter" src="http://pravoslavie.ru/images/banners/b100x100a.jpg" alt="Православие.Ru" width="100" height="100" border="0" /></a></p>
         </div>
       </div>
       <div class="yui3-u-1-4">
         <div class="content">
-          банер 2
+          <p><a href="http://www.e-vestnik.ru/" target="_blank"><img class="aligncenter" src="http://www.e-vestnik.ru/img/banners2/100x100_w.gif" alt="Церковный вестник" border="0" /></a></p>
         </div>
       </div>
       <div class="yui3-u-1-4">
         <div class="content">
-          банер 2
+          <p><a href="http://www.hristianstvo.ru/?from=http://volgeparhia.ru/" target="_blank"><img class="aligncenter" title="Православное христианство.ru" src="http://www.hristianstvo.ru/images/sr-100x100-native1.gif" alt="" width="100" height="100" border="0" /></a><br />
+</p>
         </div>
       </div>
       <div class="yui3-u-1-4">
         <div class="content  ">
-          банер 2
+          <p><a href="http://www.patriarchia.ru/index.html" target="_blank"><img class="aligncenter" src="http://www.patriarchia.ru/images/patr_banner_100.gif" alt="Официальный сайт Русской Православной Церкви / Патриархия.ru" width="100" height="100" border="0" /></a></p>
         </div>
       </div>
-
-
       <div class="yui3-u-1">
         <div class="content">
-          <p>2011. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской епархии Русской Православной
-            Церкви.</p>
+          <p>2011. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской епархии Русской Православной Церкви.</p>
         </div>
       </div>
-      <%= debug(params)if Rails.env.development? %>
+
     </div>
   </div>
 
@@ -173,24 +124,6 @@
   <div id="ornament-footer" class="yui3-u"></div>
   <div id="ornament-corner-BR" class="yui3-u"></div>
 </div>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#coin-slider').coinslider({  width: 800, // width of slider panel
-            height: 200, // height of slider panel
-            spw: 11, // squares per width
-            sph: 5, // squares per height
-            delay: 7000, // delay between images in ms
-            sDelay: 2, // delay beetwen squares in ms
-            opacity: 0.7, // opacity of title and navigation
-            titleSpeed: 500, // speed of title appereance in ms
-            navigation: false, // prev next and buttons
-            links : false, // show images as links
-            hoverPause: false // pause on hover })
-             });
-	    });
-	</script>
-
 
 
 </body>

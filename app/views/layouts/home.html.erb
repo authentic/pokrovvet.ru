@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Храм Покрова Пресвятой Богородицы (Казачий хутор Ветютнев)::: <%= @page_title || '' %> </title>
+  <%= csrf_meta_tag %>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Храм Покрова Пресвятой Богородицы в хуторе Ветютнев Фроловского района Волгоградской области"/>
+  <meta name="robots" content="index, nofollow"/>
+  <meta name="robots" content="noarchive"/>
+  <%= render 'layouts/stylesheetsn' %>
+  <%= stylesheet_link_tag('home', :media=>'screen') %>   <%= stylesheet_link_tag('coin-slider-styles.css', :media=>'screen') %>
+  <script type="text/javascript">
+      $(document).ready(function() {
+          $("#slider").easySlider({
+              auto: true,
+              continuous: true,
+              controlsShow: false,
+              speed:         800,
+              pause:            4000,
+              numeric:         false
+
+          });
+      });
+  </script>
+</head>
+
+<body class="yui3-skin-sam">
+<div id="ornament-wraper" class="yui3-g">
+
+  <div id="ornament-corner-TL" class="yui3-u"></div>
+  <div id="ornament-top" class="yui3-u"></div>
+  <div id="ornament-corner-TR" class="yui3-u"></div>
+
+  <div id="hd" class="yui3-g">
+
+    <header>
+
+      <div class="yui3-u-1">
+        <%= image_tag('title.jpg', :alt=>"") %> </div>
+      <div class="yui3-u-1">
+        <div id="slider">
+          <ul>
+            <li><%= image_tag('collage2001.jpg', :alt=>"") %></li>
+            <li><%= image_tag('collage2005.jpg', :alt=>"") %></li>
+            <li><%= image_tag('collage2006.jpg', :alt=>"") %></li>
+            <li> <%= image_tag('collage2007.jpg', :alt=>"") %></li>
+            <li><%= image_tag('collage2008.jpg', :alt=>"") %></li>
+            <li><%= image_tag('collage2008_2.jpg', :alt=>"") %></li>
+          </ul>
+        </div>
+
+
+      </div>
+
+
+    </header>
+    <div class="yui3-u-1 alt headnote">
+      <p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская
+        епархия</p>
+    </div>
+  </div>
+
+  <div id="top_navigation" class="yui3-u-1"><%= render_navigation(:level => 2) %> </div>
+
+
+  <div class="yui3-g" id="layout">
+
+    <div class="yui3-u" id="nav">
+      <div class="content">
+          <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Объявления</h2>
+          </div>
+
+          <div class="bd">
+            <ul class="examples">
+
+
+              <li data-description="Избери Жизнь">
+                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
+
+              </li>
+
+
+              <li data-description="Новости Фроловского благочиния">
+                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="yui3-u" id="main">
+      <div class="content"><%= yield %> </div>
+    </div>
+
+    <div class="yui3-u" id="extra">
+      <div class="content">
+
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Православная газета</h2>
+          </div>
+
+          <div class="bd">
+            <ul class="examples">
+
+
+              <li data-description="Избери Жизнь">
+                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
+
+              </li>
+
+
+              <li data-description="Новости Фроловского благочиния">
+                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+  <div id="ft">
+    <div class="yui3-g">
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.pravoslavie.ru/" target="_blank"><img class="aligncenter" src="http://pravoslavie.ru/images/banners/b100x100a.jpg" alt="Православие.Ru" width="100" height="100" border="0"/></a>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.e-vestnik.ru/" target="_blank"><img class="aligncenter" src="http://www.e-vestnik.ru/img/banners2/100x100_w.gif" alt="Церковный вестник" border="0"/></a>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.hristianstvo.ru/?from=http://volgeparhia.ru/" target="_blank"><img class="aligncenter" title="Православное христианство.ru" src="http://www.hristianstvo.ru/images/sr-100x100-native1.gif" alt="" width="100" height="100" border="0"/></a><br/>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1-4">
+        <div class="content  ">
+          <p>
+            <a href="http://www.patriarchia.ru/index.html" target="_blank"><img class="aligncenter" src="http://www.patriarchia.ru/images/patr_banner_100.gif" alt="Официальный сайт Русской Православной Церкви / Патриархия.ru" width="100" height="100" border="0"/></a>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1">
+        <div class="content">
+          <p>2011. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской епархии Русской Православной
+            Церкви.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="ornament-corner-BL" class="yui3-u"></div>
+  <div id="ornament-footer" class="yui3-u"></div>
+  <div id="ornament-corner-BR" class="yui3-u"></div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+

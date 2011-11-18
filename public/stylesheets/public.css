@@ -50,21 +50,15 @@
 }
 
 #layout {
-    padding-left: 250px; /* "left col" width */
-    padding-right: 250px; /* "right col" width */
+    padding-left: 300px; /* "left col" width */
+    padding-right: 0px; /* "right col" width */
     background-color: #f2f2f2
 }
 
 #nav {
-    margin-left: -250px; /* "left col" width */
-    width: 250px;
+    margin-left: -300px; /* "left col" width */
+    width: 300px;
 
-
-}
-
-#extra {
-    width: 250px;
-    margin-right: -250px; /* "right col" width */
 
 }
 
@@ -79,8 +73,8 @@
     height: auto;
 }
 
-#ft {
-    height: 100px;
+#ft { text-align: center;
+    height: auto;
 }
 
 #hd {
@@ -103,7 +97,7 @@
 }
 
 #breadcrumbs {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 #ft {
@@ -590,3 +584,27 @@ dt {
      background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
      color: #fff;
  }
+   /* Easy Slider */
+#slider{margin: 0 auto;
+width: 800px;
+height: 200px;}
+
+	#slider ul, #slider li,
+	{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+
+	#slider li, #slider2 li{
+		/*
+			define width and height of list item (slide)
+			entire slider area will adjust according to the parameters provided here
+		*/
+		width:800px;
+		height:200px;
+		overflow:hidden;
+		}
+
+
+/* // Easy Slider */

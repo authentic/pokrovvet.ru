@@ -28,7 +28,7 @@ class SectionsController < ApplicationController
     @section = Section.new(params[:section])
     if @section.save
       @section.move_to_position(new_position)
-      flash[:notice] = "Section created."
+      flash[:notice] = "Секция создана успешно."
       redirect_to(:action => 'list', :page_id => @section.page_id)
     else
       @section_count = @page.sections.size + 1
@@ -48,7 +48,7 @@ class SectionsController < ApplicationController
     @section = Section.find(params[:id])
     if @section.update_attributes(params[:section])
       @section.move_to_position(new_position)
-      flash[:notice] = "Section updated."
+      flash[:notice] = "Секция обновлена успешно."
       redirect_to(:action => 'show', :id => @section.id, :page_id => @section.page_id)
     else
       @section_count = @page.sections.size
@@ -65,7 +65,7 @@ class SectionsController < ApplicationController
     section = Section.find(params[:id])
     section.move_to_position(nil)
     section.destroy
-    flash[:notice] = "Section destroyed."
+    flash[:notice] = "Секция удалена."
     redirect_to(:action => 'list', :page_id => @page.id)
   end
 

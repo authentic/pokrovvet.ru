@@ -1,11 +1,10 @@
 class HomeController < ApplicationController
-  layout 'public'
+  layout 'home'
 
   def index
 
   end
 
-  def new
-  end
+
 
 end

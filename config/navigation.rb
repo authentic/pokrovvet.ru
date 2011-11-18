@@ -50,7 +50,7 @@ SimpleNavigation::Configuration.run do |navigation|
     #                            against the current URI.  You may also use a proc, or the symbol <tt>:subpath</tt>. 
     #
 
-    home_primary.item :home, 'Главная', '/show/home' do |primary|
+    home_primary.item :home, 'Главная', '/' do |primary|
 
       primary.item :history, 'История', '/show/history' do |sub_nav|
         sub_nav.item :khutor_vetjutnev, 'Казачий хутор Ветютнев', '/show/khutor_vetjutnev'

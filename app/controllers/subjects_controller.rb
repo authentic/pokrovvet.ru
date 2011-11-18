@@ -28,7 +28,7 @@ class SubjectsController < ApplicationController
     if @subject.save
       @subject.move_to_position(new_position)
       #If save succeeds, redirect to the list action
-      flash[:notice] = "Subject created successfully."
+      flash[:notice] = "Раздел создан успешно."
       redirect_to(:action => 'list')
     else
       #if save fails, redisplay the form so us
@@ -52,7 +52,7 @@ class SubjectsController < ApplicationController
     if @subject.update_attributes(params[:subject])
       @subject.move_to_position(new_position)
       #If update succeeds, redirect to the list action
-      flash[:notice] = "Subject updated successfully."
+      flash[:notice] = "Раздел обновлен успешно."
       redirect_to(:action => 'show', :id=> @subject.id
       )
     else
@@ -72,7 +72,7 @@ class SubjectsController < ApplicationController
     subject = Subject.find(params[:id])
     subject.move_to_position(nil)
     subject.destroy
-    flash[:notice] = "Subject destroyed."
+    flash[:notice] = "Раздел удален."
     redirect_to(:action => 'list')
   end
 end

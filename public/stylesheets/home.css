@@ -1,80 +1,616 @@
+#ornament-wraper {
+    padding-left: 45px;
+    padding-right: 45px;
+    background: url('/images/side.png') repeat-y left 45px;
+}
+
+#ornament-corner-TL {
+    margin-left: -45px;
+    width: 45px;
+    height: 45px;
+    background: no-repeat url(/images/cornerLT.png);
+
+}
+
+#ornament-top {
+    width: 100%;
+    height: 45px;
+    background: url(/images/top.png);
+
+}
+
+#ornament-corner-TR {
+
+    width: 45px;
+    margin-right: -45px;
+    height: 45px;
+    background: no-repeat url(/images/cornerRT.png);
+
+
+}
+
+#ornament-corner-BL {
+    margin-left: -45px;
+    width: 45px;
+    height: 45px;
+    background: no-repeat url('/images/cornerLB.png');
+}
+
+#ornament-footer {
+    width: 100%;
+    height: 45px;
+    background: url("/images/top.png");
+}
+
+#ornament-corner-BR {
+    width: 45px;
+    margin-right: -45px;
+    height: 45px;
+    background: no-repeat url("/images/cornerRB.png");
+}
+
+#layout {
+    padding-left: 250px; /* "left col" width */
+    padding-right: 250px; /* "right col" width */
+    background-color: #f2f2f2
+}
+
+#nav {
+    margin-left: -250px; /* "left col" width */
+    width: 250px;
+
+
+}
+
+#extra {
+    width: 250px;
+    margin-right: -250px; /* "right col" width */
+
+}
+
+#main {
+    width: 100%;
+
+}
+
+/* arbitrary content styling */
+#hd, #nav .content, #main .content, #extra .content, #ft {
+
+    height: auto;
+}
+
+#ft { text-align: center;
+    height: auto;
+}
+
+#hd {
+
+  height: auto;
+    text-align: center;
+     height: 285px;
+    /*background-color: #1aa9fb;*/
+}
+
+.headnote {
+    background: #0673bb
+}
+
+.headnote p {
+    font-size: 92.308%;
+    font-weight: bold;
+    color: white;
+    margin: 0.5em 0 0.5em 0
+}
+
+#breadcrumbs {
+    font-size: 13px;
+}
+
+#ft {
+    background: #f5f5f5;
+    background: -moz-linear-gradient(top, #f6f5f3 0, #dcdbd9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f5f3), color-stop(100%, #dcdbd9));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F6F5F3', endColorstr = '#dcdbd9', GradientType = 0);
+    border-top: 1px solid #dfddda;
+
+    *position: static
+}
+
+/*
+Font sizes for all selectors other than the body are given in percentages,
+with 100% equal to 13px. To calculate a font size percentage, multiply the
+desired size in pixels by 7.6923076923.
+
+Here's a quick lookup table:
+
+10px - 76.923%
+11px - 84.615%
+12px - 92.308%
+13px - 100%
+14px - 107.692%
+15px - 115.385%
+16px - 123.077%
+17px - 130.769%
+18px - 138.462%
+19px - 146.154%
+20px - 153.846%
+*/
+
 html {
-    background-color: #FFF;
+    background: #5aade7;
+    color: #333;
+    overflow-y: scroll;
 }
 
 body {
-    background-color: transparent;
-    text-align: center;
+    font: 13px/1.4 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', 'Bitstream Vera Sans', 'Helvetica', 'Arial', sans-serif;
+    margin: 10px;
+    padding: 0;
+    min-width: 960px;
+    background: url("/images/side.png") repeat-y right 45px;
+
 }
 
-.container {
-    margin: 18px auto 0 auto;
-    height: 576px;
-    background: #f0f2f1 url('/images/homepage.jpg') no-repeat;
+/* -- Links ----------------------------------------------------------------- */
+a {
+    color: #356de4;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #6d93e4
+}
+
+/* "Jump to Table of Contents" link is shown to assistive tools, but hidden from
+sight until it's focused. */
+.jump {
+    position: absolute;
+    padding: 3px 6px;
+    left: -99999px;
+    top: 0;
+}
+
+.jump:focus {
+    left: 40%;
+}
+
+/* -- Paragraphs ------------------------------------------------------------ */
+hr {
+    border: 0;
+    border-top: 1px solid #afafaf
+}
+
+p {
+    margin: 1.3em 0;
+}
+
+dd p, td p {
+    margin-bottom: 0;
+}
+
+dd p:first-child, td p:first-child {
+    margin-top: 0;
+}
+
+/* -- Headings -------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    color: #eb8c28;
+    font-family: 'Maven Pro', Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 1.1em 0 .5em
+}
+
+h1 {
+    font-size: 184.6%;
+    color: #30418c;
+    margin: .75em 0 .5em
+}
+
+h2 {
+    font-size: 153.846%
+}
+
+h3 {
+    font-size: 138.462%
+}
+
+h4 {
+    border-bottom: 1px solid #dbdfea;
+    font-size: 115.385%;
+    font-weight: normal;
+    padding-bottom: 2px
+}
+
+h5, h6 {
+    font-size: 107.692%
+}
+
+/* -- Code and examples ----------------------------------------------------- */
+code, kbd, pre, samp {
+    font-family: Menlo, 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Consolas', 'Inconsolata', 'Monaco', 'Courier New', fixed;
+    font-size: 92.308%;
+    line-height: 1.35;
+}
+
+p code, p kbd, p samp {
+    background: #f6f6f6;
+    border: 1px solid #ededed;
+    padding: 0 3px;
+}
+
+a code, a kbd, a samp,
+pre code, pre kbd, pre samp,
+table code, table kbd, table samp,
+.intro code, .intro kbd, .intro samp,
+.toc code, .toc kbd, .toc samp {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#doc pre.code, #doc pre.terminal {
+    overflow-x: auto;
+    *overflow-x: scroll;
+    padding: 0.3em 0.6em;
+}
+
+#doc pre.code {
+    background: #f8f8f8;
+    border: 1px solid #ececec;
+    border-left: 5px solid #e2e2e2;
+}
+
+#doc pre.terminal {
+    background: #F0EFFC;
+    border: 1px solid #D0CBFB;
+    border-left: 5px solid #D0CBFB;
+}
+
+/* Don't reduce the font size of <code>/<kbd>/<samp> elements inside <pre>
+   blocks. */
+pre code, pre kbd, pre samp {
+    font-size: 100%;
+}
+
+/* Used to denote text that shouldn't be selectable, such as line numbers or
+   shell prompts. Guess which browser this doesn't work in. */
+.noselect {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+
+/* -- Tables ---------------------------------------------------------------- */
+caption, th {
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #fff;
+    padding: 5px 12px;
+    vertical-align: top;
+}
+
+td {
+    background: #E5EDF1;
+}
+
+td dl {
+    margin: 0;
+}
+
+td dl dl {
+    margin: 1em 0;
+}
+
+td pre:first-child {
+    margin-top: 0;
+}
+
+th {
+    background: #6C8EA1;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.3;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* -- Lists ----------------------------------------------------------------- */
+.spaced li {
+    margin: 0.8em 0;
+}
+
+dd {
+    margin: 0.2em 0 0.7em 1em;
+}
+
+dl {
+    margin: 1em 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+/* -- Layout and Content ---------------------------------------------------- */
+#doc {
+    margin: auto;
+    width: 1024px;
+}
+
+#sidebar {
+    width: 270px;
 }
 
 .content {
-    height: 536px;
+    padding: 10px 10px 10px 10px;
 }
 
-.border1 {
-    border: 1px solid #ccc;
+/* -- Sidebar --------------------------------------------------------------- */
+.sidebox {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 3px #afafaf;
+    -webkit-box-shadow: 0 0 3px #afafaf;
+    box-shadow: 0 0 3px #afafaf;
+    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Helvetica', 'Arial', sans-serif;
+    margin: 0 20px 15px 5px;
+    padding: 2px;
 }
 
-a.button,
-button {
-    display: block;
-    cursor: pointer;
-    width: 140px;
-    overflow: visible;
-    background-color: #09f;
-    color: #fff;
-     font-family: Georgia, "Times New Roman", Times, serif;
+.sidebox h2 {
+    background: #efefef;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    color: #333;
+    font-size: 107.692%;
+    margin: 0;
+    padding: 2px 6px 3px;
+}
+
+.sidebox .bd {
+    font-size: 84.615%;
+}
+
+.sidebox li {
+    list-style-type: square;
+}
+
+.sidebox ol, .sidebox ul {
+    margin-left: 0;
+    padding-left: 24px;
+}
+
+.sidebox ol ol, .sidebox ol ul,
+.sidebox ul ol, .sidebox ul ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+/* -- Table of Contents ----------------------------------------------------- */
+
+/* The #toc id refers to the single global table of contents, while the .toc
+   class refers to generic TOC lists that could be used throughout the page. */
+
+.toc code, .toc kbd, .toc samp {
+    font-size: 100%;
+}
+
+.toc li {
     font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    padding: 2px 5px 2px 5px; /* Links */
-    border-width: 1px;
-    border-style: solid;
-    border-top-color: #2bf;
-    border-right-color: #08e;
-    border-bottom-color: #07d;
-    border-left-color: #1af;
-    border-radius: 5px;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-
 }
 
-
-
-a.button:hover,
-a.button:focus {
-    background-color: #06c;
-    border-top-color: #28e;
-    border-right-color: #05b;
-    border-bottom-color: #04a;
-    border-left-color: #17d;
+.toc li li {
+    font-weight: normal;
 }
 
-a.button:active {
-    background-color: #039;
-    border-top-color: #25b;
-    border-right-color: #14a;
-    border-bottom-color: #017;
-    border-left-color: #028;
+/* -- Intro and Example Boxes ----------------------------------------------- */
+.intro, .example {
+    margin-bottom: 2em;
 }
-a.button[href$=".pdf"]  {background-image: none;}
-a.button:link,
-a.button:visited,
-a.button:hover,
-a.button:active,
-a.button:focus {
+
+.example {
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 5px #bfbfbf;
+    -webkit-box-shadow: 0 0 5px #bfbfbf;
+    box-shadow: 0 0 5px #bfbfbf;
+    padding: 1em;
+}
+
+.intro {
+    background: #E2EEFB;
+    border: 1px solid #BDD6F4;
+    padding: 0em 1em;
+}
+
+/* -- Other Styles ---------------------------------------------------------- */
+
+/* These are probably YUI-specific, and should be moved out of Selleck's default
+   theme. */
+
+.button {
+    border: 1px solid #dadada;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color: #444;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 92.308%;
+    font-weight: bold;
+    padding: 4px 13px 3px;
+    -moz-text-shadow: 1px 1px 0 #fff;
+    -webkit-text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #fff;
+    white-space: nowrap;
+
+    background: #EFEFEF; /* old browsers */
+    background: -moz-linear-gradient(top, #f5f5f5 0%, #efefef 50%, #e5e5e5 51%, #dfdfdf 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f5f5f5', endColorstr = '#dfdfdf', GradientType = 0); /* ie */
+}
+
+.button:hover {
+    border-color: #466899;
     color: #fff;
     text-decoration: none;
-}
- .footer {text-align: center;
+    -moz-text-shadow: 1px 1px 0 #222;
+    -webkit-text-shadow: 1px 1px 0 #222;
+    text-shadow: 1px 1px 0 #222;
 
-        font-size: 11px;
-     background-color: fff;
+    background: #6396D8; /* old browsers */
+    background: -moz-linear-gradient(top, #6396D8 0%, #5A83BC 50%, #547AB7 51%, #466899 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396D8), color-stop(50%, #5A83BC), color-stop(51%, #547AB7), color-stop(100%, #466899)); /* webkit */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#6396D8', endColorstr = '#466899', GradientType = 0); /* ie */
 }
+
+.newwindow {
+    text-align: center;
+}
+
+
+
+
+
+
+#navigation {
+
+    font-size: 11px;
+    line-height: 1.5;
+
+    width: 100%;
+}
+
+#navigation ul {
+
+    padding-left: 5px;
+    width: 100%;
+}
+
+
+
+#navigation a {
+   color:#0673BB;
+    font-size: 12px;
+
+    display: block;
+
+    text-decoration: none;
+    zoom: 1;
+
+}
+
+#navigation a:hover, #navigation a:active {
+    text-decoration: underline;
+}
+
+#navigation ul li {
+    font-size: 10px;
+    width: 100%;
+    border: medium none;
+    list-style-image: url('/images/menuhover.png');
+
+}
+#navigation ul li.selected {
+    font-size: 10px;
+    width: 100%;
+    border: medium none;
+    list-style-image: url('/images/menu.png');
+
+}
+
+#navigation li a.selected {
+    color: #52261e;
+    text-decoration: underline;
+
+}
+
+#navigation li li {
+
+}
+
+  #navigation li:hover {
+	visibility:		inherit;
+ }*/
+
+
+
+#top_navigation {margin:  0;
+      padding: 0;}
+#top_navigation ul  {
+      margin:  0;
+      padding: 0;
+    list-style: none;
+	height: 1.5em;
+	border-bottom: 1px solid #0673BB;}
+#top_navigation ul li  { display: inline; margin:  0;
+      padding: 0;
+    font: 92.308%/1.5em Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	float: left;
+	text-align: left;}
+
+#top_navigation ul li a {
+      margin: 0;
+      padding: 8px 20px 3px 20px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+
+}
+#top_navigation ul a:link, #nav ul a:visited {
+	color: #32411B;
+	text-decoration: none;
+}
+
+#top_navigation ul li a:hover, #top_navigation ul li a:active {
+
+    background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
+    color: #ffffff;
+}
+
+ #top_navigation ul li a.selected {
+     background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
+     color: #fff;
+ }
+   /* Easy Slider */
+#slider{margin: 0 auto;
+width: 800px;
+height: 200px;}
+
+	#slider ul, #slider li,
+	{
+		margin:0;
+		padding:0;
+		list-style:none;
+		}
+
+	#slider li, #slider2 li{
+		/*
+			define width and height of list item (slide)
+			entire slider area will adjust according to the parameters provided here
+		*/
+		width:800px;
+		height:200px;
+		overflow:hidden;
+		}
+
+
+/* // Easy Slider */

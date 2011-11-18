@@ -33,7 +33,7 @@ class PagesController < ApplicationController
     if @page.save
       @page.move_to_position(new_position)
       #If save succeeds, redirect to the list action
-      flash[:notice] = "Page created successfully."
+      flash[:notice] = "Страница создана успешно."
       redirect_to(:action => 'list', :subject_id=>@page.subject_id)
     else
       #if save fails, redisplay the form so us
@@ -59,7 +59,7 @@ class PagesController < ApplicationController
     if @page.update_attributes(params[:page])
       @page.move_to_position(new_position)
       #If update succeeds, redirect to the list action
-      flash[:notice] = "Page updated successfully."
+      flash[:notice] = "Страница обновлена успешно."
       redirect_to(:action => 'show', :id=> @page.id, :subject_id =>@page.subject_id)
     else
       #if update fails, redisplay the form so us
@@ -79,7 +79,7 @@ class PagesController < ApplicationController
     page = Page.find(params[:id])
     page.move_to_position(nil)
     page.destroy
-    flash[:notice] = "Page destroyed."
+    flash[:notice] = "Страница удалена."
     redirect_to(:action => 'list', :subject_id=>@subject.id)
   end
 

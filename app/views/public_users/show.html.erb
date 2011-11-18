@@ -1,2 +1,16 @@
+<% @page_title=@public_user.name %>
 
-<%= @public_user.name %>, <%= @public_user.email %>
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= gravatar_for @public_user, :size=>100 %>
+        <%= @public_user.name %>
+      </h1>
+    </td>
+    <td class="sidebar round">
+      <strong>Name</strong> <%= @public_user.name %><br />
+      <strong>URL</strong>  <%= link_to public_users_path(@public_user), public_users_path(@public_user) %>
+    </td>
+  </tr>
+</table>

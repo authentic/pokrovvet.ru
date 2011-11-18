@@ -10,6 +10,7 @@ gem 'mysql2'
 gem "simple-navigation", "~> 3.5.0"
 gem 'ckeditor', '3.6.1'
 gem 'paperclip', '2.3.15'
+gem 'gravatar_image_tag', '1.0.0.pre2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
