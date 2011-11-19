@@ -56,7 +56,7 @@
     </header>
     <div class="yui3-u-1 alt headnote">
       <p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская
-        епархия</p>
+        епархия&nbsp;&#8727;</p>
     </div>
   </div>
 
@@ -67,13 +67,24 @@
 
     <div class="yui3-u" id="nav">
       <div class="content">
-          <div class="sidebox">
+        <div class="shadow-box">
+          <p class="alt">
+            «За молитвы Пресвятой Богородицы пусть вам Господь поможет устроить православный образ жизни для всего
+              села, для всего населения, чтобы Господь царствовал в сердце каждого из нас. А где Господь царствует, там
+              нет ни печали, ни злобы, ни воздыхания, но радость, мир и Христова любовь».
+            </p>
+
+          <p class="alt">Митрополит Волгоградский и Камышинский Герман</p>
+        </div>
+
+
+        <div class="sidebox">
           <div class="hd">
             <h2 class="no-toc">Объявления</h2>
           </div>
 
           <div class="bd">
-            <ul class="examples">
+            <!--<ul class="examples">
 
 
               <li data-description="Избери Жизнь">
@@ -86,7 +97,30 @@
                 <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
               </li>
 
-            </ul>
+            </ul>-->
+          </div>
+        </div>
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Новости сайта</h2>
+          </div>
+
+          <div class="bd">
+            <!--  <ul class="examples">
+
+
+              <li data-description="Избери Жизнь">
+                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
+
+              </li>
+
+
+              <li data-description="Новости Фроловского благочиния">
+                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
+              </li>
+
+            </ul>-->
           </div>
         </div>
 
@@ -103,27 +137,28 @@
 
         <div class="sidebox">
           <div class="hd">
-            <h2 class="no-toc">Православная газета</h2>
+            <h2 class="no-toc">Православная газета "Избери Жизнь"</h2>
           </div>
+          <div class="bd examples">
+            <a class="hover-border" href="/show/newspaper_choose_life"><%= image_tag('newspaper_nov_11_70.jpg', :alt=>"", :class=>'sideboximage') %>  </a>
 
-          <div class="bd">
-            <ul class="examples">
-
-
-              <li data-description="Избери Жизнь">
-                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
-
-              </li>
-
-
-              <li data-description="Новости Фроловского благочиния">
-                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
-              </li>
-
-            </ul>
+            <p> Ноябрь (№70) 2011г.<br>
+              <a class="hover-border button" href="/ckeditor_assets/attachments/2/newspaper_choose_life_web_nov_11_70.pdf">Скачать
+                (pdf)</a></p>
           </div>
         </div>
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Православная газета "Новости Фроловского благочиния"</h2>
+          </div>
+          <div class="bd examples">
+            <a class="hover-border" href="/show/newspaper_news_deanery_frolovskoe"><%= image_tag('newspaper2.jpg', :alt=>"", :class=>'sideboximage') %>  </a>
 
+            <p> Ноябрь (№2) 2011г.<br>
+              <a class="hover-border button" href="/ckeditor_assets/attachments/3/newspaper_news_deanery_frolovskoe_web_nov_2.pdf">Скачать
+                (pdf)</a></p>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -160,9 +195,9 @@
         </div>
       </div>
       <div class="yui3-u-1">
-        <div class="content">
+        <div class="content newwindow">
           <p>2011. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской епархии Русской Православной
-            Церкви.</p>
+            Церкви.</p><%= image_tag('page_end.png', :alt=>"") %>
         </div>
       </div>
 
