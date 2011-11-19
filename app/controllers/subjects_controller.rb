@@ -1,3 +1,4 @@
+# encoding: utf-8
 class SubjectsController < ApplicationController
   layout 'admin'
   before_filter :confirm_logged_in
@@ -21,6 +22,8 @@ class SubjectsController < ApplicationController
   end
 
   def create
+
+
     new_position = params[:subject].delete(:position)
     #Instantiate a new object using form parameters
     @subject=Subject.new(params[:subject])
