@@ -1,115 +1,3 @@
-#ornament-wraper {
-    padding-left: 45px;
-    padding-right: 45px;
-    background: url('/images/side.png') repeat-y left 45px;
-}
-
-#ornament-corner-TL {
-    margin-left: -45px;
-    width: 45px;
-    height: 45px;
-    background: no-repeat url(/images/cornerLT.png);
-
-}
-
-#ornament-top {
-    width: 100%;
-    height: 45px;
-    background: url(/images/top.png);
-
-}
-
-#ornament-corner-TR {
-
-    width: 45px;
-    margin-right: -45px;
-    height: 45px;
-    background: no-repeat url(/images/cornerRT.png);
-
-
-}
-
-#ornament-corner-BL {
-    margin-left: -45px;
-    width: 45px;
-    height: 45px;
-    background: no-repeat url('/images/cornerLB.png');
-}
-
-#ornament-footer {
-    width: 100%;
-    height: 45px;
-    background: url("/images/top.png");
-}
-
-#ornament-corner-BR {
-    width: 45px;
-    margin-right: -45px;
-    height: 45px;
-    background: no-repeat url("/images/cornerRB.png");
-}
-
-#layout {
-    padding-left: 300px; /* "left col" width */
-    padding-right: 0px; /* "right col" width */
-    background-color: #f2f2f2
-}
-
-#nav {
-    margin-left: -300px; /* "left col" width */
-    width: 300px;
-
-
-}
-
-#main {
-    width: 100%;
-
-}
-
-/* arbitrary content styling */
-#hd, #nav .content, #main .content, #extra .content, #ft {
-
-    height: auto;
-}
-
-#ft { text-align: center;
-    height: auto;
-}
-
-#hd {
-
-  height: auto;
-    text-align: center;
-     height: 285px;
-    /*background-color: #1aa9fb;*/
-}
-
-.headnote {
-    background: #0673bb
-}
-
-.headnote p {
-    font-size: 92.308%;
-    font-weight: bold;
-    color: white;
-    margin: 0.5em 0 0.5em 0
-}
-
-#breadcrumbs {
-    font-size: 12px;
-}
-
-#ft {
-    background: #f5f5f5;
-    background: -moz-linear-gradient(top, #f6f5f3 0, #dcdbd9 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f5f3), color-stop(100%, #dcdbd9));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F6F5F3', endColorstr = '#dcdbd9', GradientType = 0);
-    border-top: 1px solid #dfddda;
-
-    *position: static
-}
-
 /*
 Font sizes for all selectors other than the body are given in percentages,
 with 100% equal to 13px. To calculate a font size percentage, multiply the
@@ -131,18 +19,228 @@ Here's a quick lookup table:
 */
 
 html {
-    background: #5aade7;
+    background: #5AADE7;
     color: #333;
     overflow-y: scroll;
 }
 
 body {
     font: 13px/1.4 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', 'Bitstream Vera Sans', 'Helvetica', 'Arial', sans-serif;
-    margin: 10px;
+    margin: 0 auto;
     padding: 0;
     min-width: 960px;
-    background: url("/images/side.png") repeat-y right 45px;
+    max-width: 1280px;
+    background: url("/images/side.png") repeat-y right 40px;
 
+}
+
+#ornament-wraper {
+    padding-left: 40px;
+    padding-right: 40px;
+    background: url('/images/side.png') repeat-y left 40px;
+}
+
+#ornament-corner-TL {
+    margin-left: -40px;
+    width: 40px;
+    height: 40px;
+    background: no-repeat url(/images/cornerLT.png);
+
+}
+
+#ornament-corner-TR {
+
+    width: 40px;
+    margin-right: -40px;
+    height: 40px;
+    background: no-repeat url(/images/cornerRT.png);
+
+}
+
+#ornament-top {
+    width: 100%;
+    height: 40px;
+    background: url(/images/top.png);
+
+}
+
+#ornament-corner-BL {
+    margin-left: -40px;
+    width: 40px;
+    height: 40px;
+    background: no-repeat url('/images/cornerLB.png');
+}
+
+#ornament-footer {
+    width: 100%;
+    height: 40px;
+    background: url("/images/top.png");
+}
+
+#ornament-corner-BR {
+    width: 40px;
+    margin-right: -40px;
+    height: 40px;
+    background: no-repeat url("/images/cornerRB.png");
+}
+
+#layout {
+    padding-left: 250px; /* "left col" width */
+    padding-right: 250px; /* "right col" width */
+    background-color: #f2f2f2
+}
+
+#nav {
+    margin-left: -250px; /* "left col" width */
+    width: 250px;
+    text-align: center;
+
+}
+
+#extra {
+    width: 250px;
+    margin-right: -250px; /* "right col" width */
+    text-align: center;
+
+}
+
+#main {
+    width: 100%;
+
+}
+
+/* arbitrary content styling */
+#hd, #nav .content, #main .content, #extra .content, #ft {
+
+    height: auto;
+}
+
+#hd {
+
+    text-align: center;
+    height: auto;
+}
+
+.hd_title {
+    height: 47px
+}
+
+.hd_note {
+    background: #0673bb;
+    height: auto;
+
+}
+
+.hd_note p {
+    font-size: 107.692%;
+    font-weight: bold;
+    color: #9dc8e7;
+    margin: 1px 0 0 0;
+    padding: 2px 0 2px 0;
+
+}
+
+#ft {
+    background: #f5f5f5;
+    background: -moz-linear-gradient(top, #f6f5f3 0, #dcdbd9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f5f3), color-stop(100%, #dcdbd9));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F6F5F3', endColorstr = '#dcdbd9', GradientType = 0);
+    border-top: 1px solid #dfddda;
+    text-align: center;
+    height: auto;
+}
+
+/* Easy Slider */
+#slider {
+    margin: 0 auto;
+    width: 880px;
+    height: 200px;
+    padding: 0;
+}
+
+/* // Easy Slider */
+/* TOP NAVIGATION */
+
+#top_navigation {
+
+    height: auto;
+}
+
+#top_navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 1.5em;
+}
+
+#top_navigation ul li {
+
+    margin: 0;
+    font: 107.692%/1.5 Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    float: left;
+    padding: 0;
+
+}
+
+#top_navigation ul li a {
+
+    height: 2em;
+    line-height: 2em;
+    float: left;
+    width: auto;
+
+    display: block;
+    text-align: center;
+
+    margin: 0;
+    padding: 8px 20px 3px 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    background: #5AADE7;
+    background: -moz-linear-gradient(top, #5AADE7 0, #0673BB 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0673BB), color-stop(100%, #5AADE7));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#0673BB', endColorstr = '#5AADE7', GradientType = 0);
+    border-top: 1px solid #5AADE7;
+    border-right: 1px solid #5AADE7;
+    border-bottom: 1px solid #5AADE7;
+    text-decoration: none;
+    zoom: 1;
+
+}
+
+#top_navigation ul a:link, #nav ul a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#top_navigation ul li a:hover, #top_navigation ul li a:active {
+
+    background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
+    color: #ffffff;
+    background: -moz-linear-gradient(top, #0673BB 0, #5AADE7 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f0eeeb), color-stop(100%, #eae8e5));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F0EEEB', endColorstr = '#EAE8E5', GradientType = 0)
+}
+
+#top_navigation ul li a.selected {
+    background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
+    color: #fff;
+}
+
+/* TOP NAVIGATION */
+ /* SUB NAVIGATION */
+
+
+
+
+#sub_navigation
+{color: #333;}
+/* SUB NAVIGATION */
+#breadcrumbs {
+    font-size: 13px;
+    margin: 0 20px
 }
 
 /* -- Links ----------------------------------------------------------------- */
@@ -172,6 +270,79 @@ sight until it's focused. */
     left: 40%;
 }
 
+hr {
+    background: #ddd;
+    color: #ddd;
+    clear: both;
+    float: none;
+    width: 100%;
+    height: 1px;
+    margin: 0 0 17px;
+    border: none;
+}
+
+hr.space {
+    background: #fff;
+    color: #fff;
+    visibility: hidden;
+}
+
+<style type
+
+=
+"text/css"
+>
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-block;
+}
+
+/* for IE/Mac */
+
+<
+
+/
+style>
+
+<!--
+main stylesheet ends, CC with new stylesheet below...
+
+-->
+
+<!--
+[if IE
+
+]
+>
+<style type
+
+=
+"text/css"
+>
+.clearfix {
+    zoom: 1; /* triggers hasLayout */
+    display: block; /* resets display for IE/Win */
+}
+
+/* Only IE can see inside the conditional comment
+and read this CSS rule. Don't ever use a normal HTML
+comment inside the CC or it will close prematurely. */
+<
+
+/
+style>
+<![endif]
+
+-->
+
 /* -- Paragraphs ------------------------------------------------------------ */
 hr {
     border: 0;
@@ -188,6 +359,84 @@ dd p, td p {
 
 dd p:first-child, td p:first-child {
     margin-top: 0;
+}
+
+/* --------------------------------------------------------------
+
+   fancy-type.css
+   * Lots of pretty advanced classes for manipulating text.
+
+   See the Readme file in this folder for additional instructions.
+
+-------------------------------------------------------------- */
+
+/* Indentation instead of line shifts for sibling paragraphs. */
+p + p {
+    text-indent: 2em;
+    margin-top: -1.5em;
+}
+
+form p + p {
+    text-indent: 0;
+}
+
+/* Don't want this in forms. */
+
+/* For great looking type, use this code instead of asdf:
+<span class="alt">asdf</span>
+Best used on prepositions and ampersands. */
+
+.alt {
+    color: #666;
+    font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+/* For great looking quote marks in titles, replace "asdf" with:
+<span class="dquo">&#8220;</span>asdf&#8221;
+(That is, when the title starts with a quote mark).
+(You may have to change this value depending on your font size). */
+
+.dquo {
+    margin-left: -.5em;
+}
+
+/* Reduced size type with incremental leading
+(http://www.markboulton.co.uk/journal/comments/incremental_leading/)
+
+This could be used for side notes. For smaller type, you don't necessarily want to
+follow the 1.5x vertical rhythm -- the line-height is too much.
+
+Using this class, it reduces your font size and line-height so that for
+every four lines of normal sized type, there is five lines of the sidenote. eg:
+
+New type size in em's:
+10px (wanted side note size) / 12px (existing base size) = 0.8333 (new type size in ems)
+
+New line-height value:
+12px x 1.5 = 18px (old line-height)
+18px x 4 = 72px
+72px / 5 = 14.4px (new line height)
+14.4px / 10px = 1.44 (new line height in em's) */
+
+p.incr, .incr p {
+    font-size: 10px;
+    line-height: 1.44em;
+    margin-bottom: 1.5em;
+}
+
+/* Surround uppercase words and abbreviations with this class.
+Based on work by Jørgen Arnor Gårdsø Lom [http://twistedintellect.com/] */
+
+.caps {
+    font-variant: small-caps;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    font-size: 1.2em;
+    line-height: 1%;
+    font-weight: bold;
+    padding: 0 2px;
 }
 
 /* -- Headings -------------------------------------------------------------- */
@@ -223,6 +472,9 @@ h4 {
 h5, h6 {
     font-size: 107.692%
 }
+
+/*.content_title {   text-align: center;}
+.titleh{display: inline-block;margin: 0 auto; width: auto; background: #b0dbf7 url(../images/menuhover.png) no-repeat -10px -5px;  }*/
 
 /* -- Code and examples ----------------------------------------------------- */
 code, kbd, pre, samp {
@@ -355,15 +607,25 @@ dt {
 
 /* -- Sidebar --------------------------------------------------------------- */
 .sidebox {
+    border: 1px solid #d4d8eb;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 4px;
-    -moz-box-shadow: 0 0 3px #afafaf;
-    -webkit-box-shadow: 0 0 3px #afafaf;
-    box-shadow: 0 0 3px #afafaf;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 0 15px 0;
+    padding-bottom: 1px;
+    text-align: center;
     font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'Helvetica', 'Arial', sans-serif;
-    margin: 0 20px 15px 5px;
-    padding: 2px;
+}
+
+.sidebox .hd {
+    background: #e5e6f1;
+    -moz-border-radius: 3px 3px 0 0;
+    -webkit-border-radius: 3px 3px 0 0;
+    border-radius: 3px 3px 0 0;
+    padding: 4px 7px 5px
 }
 
 .sidebox h2 {
@@ -394,6 +656,86 @@ dt {
 .sidebox ul ol, .sidebox ul ul {
     margin: 0;
     padding-left: 16px;
+}
+
+.sidebox .bd {
+    background: #f9f9fc;
+    -moz-border-radius: 0 0 3px 3px;
+    -webkit-border-radius: 0 0 3px 3px;
+    border-radius: 0 0 3px 3px;
+    font-size: 11px;
+    padding: 10px 8px 10px
+}
+
+.sidebox .hd h2 {
+    color: #30418c;
+    font-weight: bold;
+    font-size: 107.692%;
+    margin: 0
+}
+
+.sidebox li {
+    color: #d4d5e3;
+    list-style-type: disc
+}
+
+.sidebox ol, .sidebox ul {
+    margin: 0;
+    padding-left: 14px
+}
+
+.sidebox ol ol, .sidebox ol ul, .sidebox ul ol, .sidebox ul ul {
+    margin: 0;
+    padding-left: 14px
+}
+
+.sideboximage {
+    border: 1px solid #a7a49f;
+}
+
+.shadow-box {
+    background: #f9f9fc;
+    border: 1px solid #d4d8eb;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.15);
+    padding: 6px 10px;
+    margin: 0 0 15px 0;
+}
+
+.shadow-box .hd h5 {
+    background: #e5e6f1;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+    border-radius: 4px 4px 0 0;
+    color: #5e6ba4;
+    font-weight: bold;
+    font-size: 107.692%;
+    margin: 0;
+    padding: 4px 7px 5px
+}
+.shadow-box li {
+    list-style-type: square;
+}
+
+.shadow-box ol, .shadow-box ul {
+    margin-left: 0;
+    padding-left: 24px;
+}
+
+.shadow-box ol ol, .shadow-box ol ul,
+.shadow-box ul ol, .shadow-box ul ul {
+    margin: 0;
+    padding-left: 16px;
+}
+
+
+.tata {
+    margin: 0;
+    font-size: 110%;
 }
 
 /* -- Table of Contents ----------------------------------------------------- */
@@ -439,172 +781,516 @@ dt {
 /* These are probably YUI-specific, and should be moved out of Selleck's default
    theme. */
 
+.button, .button:visited {
+    color: #444
+}
+
 .button {
-    border: 1px solid #dadada;
+    border: 1px solid #e9e9e9;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
     border-radius: 3px;
-    color: #444;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     display: inline-block;
     font-family: Helvetica, Arial, sans-serif;
-    font-size: 92.308%;
+    font-size: 13px;
     font-weight: bold;
     padding: 4px 13px 3px;
+    text-align: center;
     -moz-text-shadow: 1px 1px 0 #fff;
     -webkit-text-shadow: 1px 1px 0 #fff;
     text-shadow: 1px 1px 0 #fff;
     white-space: nowrap;
-
-    background: #EFEFEF; /* old browsers */
-    background: -moz-linear-gradient(top, #f5f5f5 0%, #efefef 50%, #e5e5e5 51%, #dfdfdf 100%); /* firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf)); /* webkit */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f5f5f5', endColorstr = '#dfdfdf', GradientType = 0); /* ie */
+    background: #efefef;
+    background: -moz-linear-gradient(top, #f5f5f5 0, #efefef 50%, #e5e5e5 51%, #dfdfdf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f5f5f5', endColorstr = '#dfdfdf', GradientType = 0);
+    *border-color: #dadada;
+    *padding-bottom: 5px
 }
 
 .button:hover {
     border-color: #466899;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
     color: #fff;
     text-decoration: none;
     -moz-text-shadow: 1px 1px 0 #222;
     -webkit-text-shadow: 1px 1px 0 #222;
     text-shadow: 1px 1px 0 #222;
+    background: #6396d8;
+    background: -moz-linear-gradient(top, #6396d8 0, #5a83bc 50%, #547ab7 51%, #466899 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396d8), color-stop(50%, #5a83bc), color-stop(51%, #547ab7), color-stop(100%, #466899));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#6396D8', endColorstr = '#466899', GradientType = 0)
+}
 
-    background: #6396D8; /* old browsers */
-    background: -moz-linear-gradient(top, #6396D8 0%, #5A83BC 50%, #547AB7 51%, #466899 100%); /* firefox */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396D8), color-stop(50%, #5A83BC), color-stop(51%, #547AB7), color-stop(100%, #466899)); /* webkit */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#6396D8', endColorstr = '#466899', GradientType = 0); /* ie */
+.button.download {
+    display: block;
+    font-size: 18px;
+    margin: 0 0 1em;
+    padding: 9px 17px 8px
 }
 
 .newwindow {
     text-align: center;
 }
 
+/* //................................................///////////////////////////////////////////////// */
 
-
-
-
-
-#navigation {
-
-    font-size: 11px;
-    line-height: 1.5;
-
-    width: 100%;
+.clearfix {
+    zoom: 1
 }
 
-#navigation ul {
-
-    padding-left: 5px;
-    width: 100%;
-}
-
-
-
-#navigation a {
-   color:#0673BB;
-    font-size: 12px;
-
+.clearfix:after {
+    clear: both;
+    content: '.';
     display: block;
-
-    text-decoration: none;
-    zoom: 1;
-
+    height: 0;
+    line-height: 0;
+    visibility: hidden
 }
 
-#navigation a:hover, #navigation a:active {
-    text-decoration: underline;
+.column {
+    margin-right: 10px
 }
 
-#navigation ul li {
-    font-size: 10px;
-    width: 100%;
-    border: medium none;
-    list-style-image: url('/images/menuhover.png');
-
-}
-#navigation ul li.selected {
-    font-size: 10px;
-    width: 100%;
-    border: medium none;
-    list-style-image: url('/images/menu.png');
-
+.components {
+    list-style-type: square;
+    margin: 0;
+    padding: 0 0 0 17px
 }
 
-#navigation li a.selected {
-    color: #52261e;
-    text-decoration: underline;
-
+.gravatar {
+    border: 1px solid #afafaf
 }
 
-#navigation li li {
-
+.hidden {
+    display: none
 }
 
-  #navigation li:hover {
-	visibility:		inherit;
- }*/
+.hoverable {
+    cursor: pointer
+}
 
+.hoverable-group {
+    position: relative
+}
 
+.more {
+    text-align: right
+}
 
-#top_navigation {margin:  0;
-      padding: 0;}
-#top_navigation ul  {
-      margin:  0;
-      padding: 0;
+.off-left {
+    position: absolute;
+    left: -9999px
+}
+
+.play-icon {
+    *background: top left no-repeat url(/img/misc/play.png);
+    *display: inline-block;
+    *font-size: 0;
+    *height: 14px;
+    *margin-right: 3px;
+    *position: relative;
+    *top: 2px;
+    *width: 14px
+}
+
+.right {
+    float: right
+}
+
+.spaced li {
+    margin: .8em 0
+}
+
+.component-grid {
+    margin: 1em 0 0 -7px;
+    zoom: 1
+}
+
+.component-grid .components {
     list-style: none;
-	height: 1.5em;
-	border-bottom: 1px solid #0673BB;}
-#top_navigation ul li  { display: inline; margin:  0;
-      padding: 0;
-    font: 92.308%/1.5em Helvetica, Arial, sans-serif;
-	text-transform: uppercase;
-	float: left;
-	text-align: left;}
-
-#top_navigation ul li a {
-      margin: 0;
-      padding: 8px 20px 3px 20px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-
-}
-#top_navigation ul a:link, #nav ul a:visited {
-	color: #32411B;
-	text-decoration: none;
+    padding: 0
 }
 
-#top_navigation ul li a:hover, #top_navigation ul li a:active {
-
-    background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
-    color: #ffffff;
+.component-grid .desc {
+    font-size: 12px;
+    line-height: 1.3;
+    margin: 2px 0 0
 }
 
- #top_navigation ul li a.selected {
-     background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
-     color: #fff;
- }
-   /* Easy Slider */
-#slider{margin: 0 auto;
-width: 800px;
-height: 200px;}
+.component-grid .name {
+    font-weight: bold
+}
 
-	#slider ul, #slider li,
-	{
-		margin:0;
-		padding:0;
-		list-style:none;
-		}
+.component-grid .component a {
+    border: 1px solid transparent;
+    display: block;
+    padding: 3px 7px 5px;
+    margin-bottom: 3px;
+    text-decoration: none;
+    _border-color: #f8f8f8
+}
 
-	#slider li, #slider2 li{
-		/*
-			define width and height of list item (slide)
-			entire slider area will adjust according to the parameters provided here
-		*/
-		width:800px;
-		height:200px;
-		overflow:hidden;
-		}
+.component-grid .component a .desc {
+    color: #333
+}
 
+.component-grid .component a:hover {
+    background: #e2eefb;
+    border-color: #bdd6f4
+}
 
-/* // Easy Slider */
+.component .beta {
+    color: #999;
+    font-size: 11px;
+    text-decoration: none
+}
+
+.mac-only, .pc-only {
+    visibility: hidden
+}
+
+.pc .mac-only, .mac .pc-only {
+    display: none
+}
+
+.mac .mac-only, .pc .pc-only {
+    visibility: visible
+}
+
+#doc, #wrap {
+    background: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100%;
+    min-width: 960px;
+    position: relative;
+    *zoom: 1
+}
+
+/**/
+
+/*@media all and (min-width:1201px) {
+    #hd, #ft {
+        border: 1px solid #dfdfdf
+    }*/
+
+/* #hd {
+        border-top: 0;
+        -moz-border-radius: 0 0 6px 6px;
+        -webkit-border-radius: 0 0 6px 6px;
+        border-radius: 0 0 6px 6px
+    }
+
+    #ft {
+        border-bottom: 0;
+        -moz-border-radius: 6px 6px 0 0;
+        -webkit-border-radius: 6px 6px 0 0;
+        border-radius: 6px 6px 0 0
+    }
+}
+
+#hd .content {
+    padding: 0 15px 1px 20px
+}
+*/
+.logo {
+    border: 0;
+    height: 52px;
+    margin-top: 15px;
+    width: 117px
+}
+
+#userinfo {
+    color: #555;
+    font-size: 11px;
+    list-style: none;
+    margin-top: 5px;
+    padding: 0;
+    text-align: right;
+    zoom: 1
+}
+
+#userinfo li {
+    border-left: 1px solid #c6c4c4;
+    display: inline-block;
+    display: inline;
+    line-height: 1.2;
+    padding: 0 4px 0 7px
+}
+
+#userinfo li:first-child {
+    border: 0
+}
+
+#userinfo .gravatar {
+    height: 16px;
+    margin-right: 3px;
+    vertical-align: -5px;
+    width: 16px
+}
+
+#userinfo .username {
+    font-weight: bold
+}
+
+#main-search .search-input {
+    float: right;
+    margin-right: 2px
+}
+
+.search-input {
+    width: 240px
+}
+
+.search, .search li {
+    margin: 0
+}
+
+.search .result, .search .result .title {
+    color: #333;
+    font-family: Helvetica, 'DejaVu Sans', 'Bitstream Vera Sans', Arial, sans-serif;
+    font-size: 12px
+}
+
+.search .result {
+    padding: 3px 0;
+    position: relative;
+    zoom: 1
+}
+
+.search .result:after {
+    clear: both;
+    content: '.';
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden
+}
+
+.search .yui3-aclist-content {
+    max-height: 350px;
+    overflow-y: auto
+}
+
+.search .yui3-aclist-item-active .result, .search .yui3-aclist-item-active .result .title {
+    color: #fff
+}
+
+.search .result.class .className, .search .result.module .className {
+    display: none
+}
+
+.search .result a {
+    color: inherit;
+    text-decoration: inherit
+}
+
+.search .result .className, .search .result .type {
+    color: #afafaf;
+    font-size: 10px
+}
+
+.search .result .type {
+    background: #bfbfbf;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 10px;
+    padding: 1px 4px 1px
+}
+
+.search .yui3-aclist-item-active .result .type {
+    background: #fff;
+    color: #333
+}
+
+.search .result .description {
+    font-size: 11px
+}
+
+.search .result .title {
+    display: inline;
+    margin: 0 50px 0 0
+}
+
+.search .result .type {
+    position: absolute;
+    right: 0;
+    top: 3px
+}
+
+.search .result .yui3-highlight {
+    color: #00f
+}
+
+.search .yui3-aclist-item-active .yui3-highlight {
+    color: #bfdaff
+}
+
+.project-version {
+    color: #cfcfcf;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 7px
+}
+
+#bd {
+    padding: 7px 0 130px;
+    position: relative;
+    width: 99%;
+    *width: 100%
+}
+
+.body-heading, #bd .content {
+    padding: 0 16px 0 20px;
+    *padding-top: 1px
+}
+
+.body-heading {
+    margin-bottom: .3em
+}
+
+.body-heading h1 {
+    margin: .5em 0 0
+}
+
+.article ul {
+    margin-top: -.5em
+}
+
+/*
+#ft {
+    background: #f5f5f5;
+    background: -moz-linear-gradient(top, #f6f5f3 0, #dcdbd9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f6f5f3), color-stop(100%, #dcdbd9));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#F6F5F3', endColorstr = '#dcdbd9', GradientType = 0);
+    border-top: 1px solid #dfddda;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    *position: static
+}
+*/
+
+.copyright {
+    font-size: 12px;
+    margin: 1em 0;
+    padding: 1em 2em 1em 1.5em
+}
+
+#downloads {
+    min-width: 700px
+}
+
+#downloads ul li {
+    list-style-type: none
+}
+
+#downloads ul li a {
+    background-image: url(/img/archive_zip.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    padding-left: 20px
+}
+
+#downloads ul li strong {
+    font-size: 80%;
+    font-weight: normal;
+    color: #ccc;
+    margin-left: 4px
+}
+
+#downloads ul li em {
+    font-size: 80%;
+    float: right;
+    font-style: normal;
+    margin-right: 2em
+}
+
+#dl_list .item {
+    margin: 1em;
+    padding: .5em
+}
+
+#dl_list .item img {
+    position: relative;
+    top: 6px;
+    margin-right: 5px
+}
+
+#dl_list .item a {
+    color: #1f2c7b;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 120%
+}
+
+#dl_list .item p {
+    font-size: 90%
+}
+
+.logo-small {
+    height: 22px;
+    width: 50px
+}
+
+.ribbon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 5
+}
+
+.ribbon img {
+    border: 0
+}
+
+#hd.ribbonized .content {
+    padding-right: 140px
+}
+
+.yui3-u-1-2 {
+    *width: 49%
+}
+
+.yui3-u-1-4 {
+    *width: 24%
+}
+
+.yui3-u-3-4 {
+    *width: 74%
+}
+
+/*
+@media print {
+    pre.code, pre.terminal, pre.cmd, #doc pre.prettyprint, p code, p kbd, p samp {
+        background: 0;
+        border: 0;
+        overflow-x: visible;
+        overflow-y: visible;
+        padding: 0
+    }
+
+    pre.code, pre.terminal, pre.cmd, #doc pre.prettyprint {
+        padding-left: 1em
+    }
+
+    #breadcrumbs, #hd, #ft .links, .no-print, .sidebar {
+        display: none
+    }
+
+    #ft {
+        background: 0;
+        position: static
+    }
+
+    .print-max-width {
+        width: 100%
+    }
+}*/
