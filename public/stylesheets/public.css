@@ -225,7 +225,7 @@ body {
 }
 
 #top_navigation ul li a.selected {
-    background: #0673BB url(../images/menuhover.png) no-repeat left 5px;
+    background: #0673BB url(../images/menuhover.png) no-repeat left 10px;
     color: #fff;
 }
 
@@ -235,8 +235,30 @@ body {
 
 
 
-#sub_navigation
-{color: #333;}
+#sub_navigation{ text-align: left;
+    }
+#sub_navigation ul{
+
+}
+#sub_navigation ul li{
+
+}
+#sub_navigation ul li a{
+     color: #333333;
+    text-decoration: none;
+
+}
+#sub_navigation ul a:link, #nav ul a:visited {
+    color: #333333;
+    text-decoration: none;
+
+}
+#sub_navigation ul li a:hover, #sub_navigation ul li a:active{
+
+}
+#sub_navigation ul li a.selected{
+
+}
 /* SUB NAVIGATION */
 #breadcrumbs {
     font-size: 13px;
