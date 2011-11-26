@@ -12,6 +12,9 @@
   <%= stylesheet_link_tag('nivo-slider', :media=>'screen') %>
   <%= stylesheet_link_tag('themes/default/default', :media=>'screen') %>
   <%= javascript_include_tag "jquery.nivo.slider.pack.js" %>
+ <script type="text/javascript">
+            swfobject.registerObject("csSWF", "9.0.115", "swf/Michael_archangel/expressInstall.swf");
+        </script>
 
   <script type="text/javascript">
       $(window).load(function() {
@@ -34,6 +37,7 @@
     });
       });
   </script>
+
 
 </head>
 
@@ -152,11 +156,11 @@
           <h2 class="no-toc">Православная газета "Избери Жизнь"</h2>
         </div>
         <div class="bd examples">
-          <a class="hover-border" href="/show/newspaper_choose_life"><%= image_tag('newspaper_nov_11_70.jpg', :alt=>"", :class=>'sideboximage') %>  </a>
+              <%=link_to image_tag('newspaper_nov_11_70.jpg', :alt=>"", :class=>'sideboximage'),"/show/newspaper_choose_life", :class=>"hover-border"  %>
 
           <p> Ноябрь (№70) 2011г.<br>
-            <a class="hover-border button" href="/ckeditor_assets/attachments/2/newspaper_choose_life_web_nov_11_70.pdf">Скачать
-              (pdf)</a></p>
+            <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/2/newspaper_choose_life_web_nov_11_70.pdf", :target=>"_blank", :class=>'hover-border button') %>
+            </p>
         </div>
       </div>
       <div class="sidebox">
@@ -164,11 +168,12 @@
           <h2 class="no-toc">Православная газета "Новости Фроловского благочиния"</h2>
         </div>
         <div class="bd examples">
-          <a class="hover-border" href="/show/newspaper_news_deanery_frolovskoe"><%= image_tag('newspaper2.jpg', :alt=>"", :class=>'sideboximage') %>  </a>
+           <%=link_to image_tag('newspaper2.jpg', :alt=>"", :class=>'sideboximage'),"/show/newspaper_news_deanery_frolovskoe", :class=>"hover-border"  %>
+
 
           <p> Ноябрь (№2) 2011г.<br>
-            <a class="hover-border button" href="/ckeditor_assets/attachments/3/newspaper_news_deanery_frolovskoe_web_nov_2.pdf">Скачать
-              (pdf)</a></p>
+            <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/3/newspaper_news_deanery_frolovskoe_web_nov_2.pdf", :target=>"_blank", :class=>'hover-border button') %>
+          </p>
         </div>
       </div>
 
