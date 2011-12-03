@@ -51,18 +51,18 @@
       <div></div>
     </div>
 
-  <div class="yui3-g" id="layout">
+  <div class="yui3-g" id="layoutpub">
 
-    <div class="yui3-u" id="nav">
+    <div class="yui3-u" id="navpub">
       <div class="content">
         <div id="sub_navigation" class="shadow-box"> <%= render_navigation(:level => 3..4) %></div>
 
       </div>
     </div>
 
-    <div class="yui3-u" id="main">
+    <div class="yui3-u" id="mainpub">
       <div class="content">
-        <div id="breadcrumbs" class="yui3-u-2-3">
+        <div id="breadcrumbs" class="yui3-u-1">
           <%= render_navigation :renderer => :breadcrumbs, :join_with => ' &raquo; ' %>
         </div><%= yield %> </div>
 

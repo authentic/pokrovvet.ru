@@ -1,5 +1,5 @@
 <% @page_title=@page.name %>
-<h1 class="alt"><%= @page.name %></h1>
+<div class="shadow-box"><div class="hd"><h1 class="alt"><%= @page.name.html_safe %></h1></div>
 
 <% @page.sections.visible.sorted.each do |section| %>
 
@@ -12,4 +12,6 @@
     <% end %>
   </section>
 <% end %>
+
+ </div>
 
