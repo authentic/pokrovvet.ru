@@ -5,7 +5,8 @@ gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'rails-i18n'
+gem 'russian'
 gem 'mysql2'
 gem "simple-navigation", "~> 3.5.0"
 gem 'ckeditor', '3.6.1'

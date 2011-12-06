@@ -1,0 +1,9 @@
+#encoding: utf-8
+ru:
+  errors:
+    zero: "ошибок"
+    one: "ошибка"
+    few: "ошибок"
+    many: "ошибок"
+    other: "ошибок"
+

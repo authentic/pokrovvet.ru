@@ -1,2 +1,28 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+# encoding: utf-8
+<% @page_title="Регистрация" %>
+<h1>Регистрация</h1>
+<%= form_for(@public_user) do |f| %>
+    <%= render 'shared/error_messages' %>
+    <div class="field">
+      <%= f.label "Имя пользователя:" %><br />
+      <%= f.text_field :name %>
+    </div>
+     <div class="field">
+      <%= f.label "Электронная почта:" %><br />
+      <%= f.text_field :email %>
+    </div>
+     <div class="field">
+      <%= f.label "Пароль:" %><br />
+      <%= f.password_field :password %>
+    </div>
+     <div class="field">
+      <%= f.label "Подтверждение пароля:" %><br />
+      <%= f.password_field :password_confirmation %>
+    </div> <br />
+     <div>
+      <%= f.submit "Зарегистрироваться", :class=>"button" %><br />
+
+    </div>
+
+
+<% end %>
