@@ -1,6 +1,8 @@
 PokrovvetRu::Application.routes.draw do
 
+
   resources :public_users
+  resources :sessions, :only=>[:new, :create, :destroy]
 
 
   root :to => "home#index"
@@ -8,6 +10,8 @@ PokrovvetRu::Application.routes.draw do
   match 'admin', :to=> 'access#menu'
   match 'show/:id', :to => 'public#show'
   match '/signup', :to =>'public_users#new'
+  match '/signin', :to =>'sessions#new'
+  match '/signout', :to=>'sessions#destroy'
   Rails.application.routes.draw do
      namespace :ckeditor, :only => [:index, :create, :destroy] do
       resources :pictures
