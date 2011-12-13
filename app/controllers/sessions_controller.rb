@@ -13,7 +13,8 @@ class SessionsController < ApplicationController
       flash.now[:error] = "Нужно ввести правильный адрес электронной почты и пароль."
       render 'new'
     else
-      #handle successful sighin
+      sign_in public_user
+      redirect_to public_user
     end
   end
 

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
+  include SessionsHelper
   protected
    def confirm_logged_in
      unless session[:user_id]

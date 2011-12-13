@@ -1,4 +1,6 @@
-require 'digest/sha2'
+
+
+
 # == Schema Information
 #
 # Table name: public_users
@@ -9,8 +11,11 @@ require 'digest/sha2'
 #  created_at         :datetime
 #  updated_at         :datetime
 #  encrypted_password :string(255)
+#  salt               :string(255)
 #
 
+
+require 'digest/sha2'
 
 class PublicUser < ActiveRecord::Base
   attr_accessor :password
@@ -35,11 +40,13 @@ class PublicUser < ActiveRecord::Base
   end
   class<< self
     def authenticate(email, submitted_password)
-      user=find_by_email(email)
-      return nil if user.nil?
-      return user if user.has_password?(submitted_password)
-
-  end
+      public_user=find_by_email(email)
+      (public_user && public_user.has_password?(submitted_password)) ? public_user : nil
+    end
+    def authenticate_with_salt (id, cookie_salt)
+      public_user=find_by_id(id)
+      (public_user && public_user.salt==cookie_salt) ? public_user : nil
+    end
   end
 
   private
@@ -62,5 +69,4 @@ class PublicUser < ActiveRecord::Base
   end
 
 end
-
 
