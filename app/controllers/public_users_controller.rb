@@ -13,6 +13,7 @@ class PublicUsersController < ApplicationController
 
      @public_user=PublicUser.new(params[:public_user])
      if @public_user.save
+       sign_in @public_user
      redirect_to @public_user, :flash => {:success => "Добро пожаловать!"}
      else
        render 'new'
