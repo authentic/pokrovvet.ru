@@ -2,8 +2,12 @@
 class PublicUsersController < ApplicationController
   layout 'public'
 
-  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
+  def index
+    @public_users=PublicUser.all
+  end
+
   def show
     @public_user= PublicUser.find(params[:id])
   end

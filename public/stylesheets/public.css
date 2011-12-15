@@ -1087,9 +1087,8 @@ p .right {margin:0 0 1.5em 1.5em;padding:0;}
 
 #userinfo {
     color: #555;
-    font-size: 11px;
     list-style: none;
-    margin-top: 5px;
+    margin-top: 1em;
     padding: 0;
     text-align: right;
     zoom: 1
@@ -1108,10 +1107,10 @@ p .right {margin:0 0 1.5em 1.5em;padding:0;}
 }
 
 #userinfo .gravatar {
-    height: 16px;
+    height: 30px;
     margin-right: 3px;
     vertical-align: -5px;
-    width: 16px
+    width: 30px
 }
 
 #userinfo .username {
