@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in public_user
-      redirect_to public_user
+      redirect_back_or public_user
     end
   end
 

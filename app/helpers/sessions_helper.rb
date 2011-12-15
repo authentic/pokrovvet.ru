@@ -4,9 +4,7 @@ module SessionsHelper
        cookies.permanent.signed[:remember_token]=[public_user.id, public_user.salt]
     self.current_user = public_user
   end
-  def current_user?(public_user)
-    public_user == current_user
-  end
+
   def current_user=(public_user)
     @current_user = public_user
   end
@@ -20,8 +18,23 @@ module SessionsHelper
     cookies.delete(:remember_token)
       self.current_user=nil
   end
+
+  def current_user?(public_user)
+    public_user == current_user
+  end
   def deny_access
+store_location
     redirect_to signin_path, :notice => "Пожалуйста войдите на сайт для редактирования этой страницы."
+  end
+  def store_location
+     session[:return_to] =request.fullpath
+  end
+    def redirect_back_or(default)
+       redirect_to(session[:return_to] || default)
+      clear_return_to
+    end
+  def clear_return_to
+     session[:return_to]=nil
   end
 
     private
