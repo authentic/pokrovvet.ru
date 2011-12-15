@@ -1,15 +1,15 @@
 # encoding: utf-8
 
-<% if @public_user.errors.any? %>
+<% if object.errors.any? %>
     <div id="error_explanation">
       <h2>
          Обнаружено
 
-         <%=@public_user.errors.count%>  <%=I18n.translate :errors, :count=> @public_user.errors.count %>:
+         <%=object.errors.count%>  <%=I18n.translate :errors, :count=> object.errors.count %>:
 
       </h2>
          <ul>
-        <% @public_user.errors.full_messages.each do |message|%>
+        <% object.errors.full_messages.each do |message|%>
          <li><%=translate message %></li>
             <% end %>
    </ul>

@@ -1,7 +1,11 @@
+# encoding: utf-8
 module SessionsHelper
   def sign_in(public_user)
        cookies.permanent.signed[:remember_token]=[public_user.id, public_user.salt]
     self.current_user = public_user
+  end
+  def current_user?(public_user)
+    public_user == current_user
   end
   def current_user=(public_user)
     @current_user = public_user
@@ -15,6 +19,9 @@ module SessionsHelper
   def sing_out
     cookies.delete(:remember_token)
       self.current_user=nil
+  end
+  def deny_access
+    redirect_to signin_path, :notice => "Пожалуйста войдите на сайт для редактирования этой страницы."
   end
 
     private
