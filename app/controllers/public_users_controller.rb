@@ -10,7 +10,6 @@ class PublicUsersController < ApplicationController
   end
 
    def create
-
      @public_user=PublicUser.new(params[:public_user])
      if @public_user.save
        sign_in @public_user
@@ -18,6 +17,21 @@ class PublicUsersController < ApplicationController
      else
        render 'new'
      end
-
    end
+def edit
+  @public_user=PublicUser.find(params[:id])
+
+end
+  def update
+    @public_user =PublicUser.find(params[:id])
+    if @public_user.update_attributes(params[:public_user])
+
+       redirect_to @public_user, :flash=>{:success=>"Профиль обновлен!"}
+       else
+         render 'edit'
+    end
+
+  end
+
+
 end

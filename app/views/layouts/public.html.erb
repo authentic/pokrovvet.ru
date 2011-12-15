@@ -49,7 +49,8 @@
       <div class="yui3-u-5-6 clearfix"><%= render_navigation(:level => 2) %></div>
       <div class="yui3-u-1-6 clearfix">
                   <%if signed_in?   %>
-            <%= link_to "Профайл", current_user %>
+            <%= link_to "Профиль", current_user %>
+            <%= link_to "Настройки", edit_public_user_path(current_user) %>
            <% end %>
 
        <%if signed_in?   %>

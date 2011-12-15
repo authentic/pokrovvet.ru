@@ -1,0 +1,16 @@
+# encoding: utf-8
+<% @page_title="Настройки учетной записи" %>
+<h1>Редактировать настройки учетной записи.</h1>
+<%= form_for(@public_user) do |f| %>
+
+    <%= render(:partial => "fields", :locals => {:f=> f}) %>
+     <div>
+      <%= f.submit "Сохранить изменения", :class=>"button" %><br />
+
+    </div>
+<% end %>
+  <br />
+<div class="">
+  <%= gravatar_for @public_user %>  <br />
+   <%= link_to "Изменить граватар", "http://ru.gravatar.com", :target=>"_blank", :class=>''%>
+</div>

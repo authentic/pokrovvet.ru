@@ -1,0 +1,17 @@
+<%= render 'shared/error_messages' %>
+    <div class="field">
+      <%= f.label "Имя пользователя:" %><br />
+      <%= f.text_field :name %>
+    </div>
+     <div class="field">
+      <%= f.label "Электронная почта:" %><br />
+      <%= f.text_field :email %>
+    </div>
+     <div class="field">
+      <%= f.label "Пароль:" %><br />
+      <%= f.password_field :password %>
+    </div>
+     <div class="field">
+      <%= f.label "Подтверждение пароля:" %><br />
+      <%= f.password_field :password_confirmation %>
+    </div> <br />
