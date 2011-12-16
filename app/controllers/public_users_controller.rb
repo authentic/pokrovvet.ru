@@ -5,7 +5,7 @@ class PublicUsersController < ApplicationController
   before_filter :authenticate, :only => [:index, :edit, :update]
   before_filter :correct_user, :only => [:edit, :update]
   def index
-    @public_users=PublicUser.all
+    @public_users=PublicUser.paginate(:page=>params[:page])
   end
 
   def show

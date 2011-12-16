@@ -2,13 +2,9 @@
 <% @page_title="Зарегистрированные пользователи сайта" %>
 
 <h1>Зарегистрированные пользователи сайта</h1>
+<%= will_paginate %>
 
 <ul id="userinfo">
-  <% @public_users.each do |public_user| %>
-        <li>
-          <%=gravatar_for public_user, :size=>30  %>
-          <%= link_to public_user.name, public_user %>
-        </li>
-
-  <% end %>
+    <%= render @public_user %>
   </ul>
+<%= will_paginate %>

@@ -12,6 +12,7 @@ gem "simple-navigation", "~> 3.5.0"
 gem 'ckeditor', '3.6.1'
 gem 'paperclip', '2.3.15'
 gem 'gravatar_image_tag', '1.0.0.pre2'
+gem 'will_paginate', '3.0.pre2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -37,6 +38,7 @@ group :development do
   gem 'mongrel', '1.2.0.pre2'
   gem "unicorn", "~> 4.0.1"
   gem 'annotate', '2.4.0'
+  gem 'faker'
 end
 group :test do
   gem 'rspec-rails', '2.6.1'
