@@ -45,7 +45,7 @@ class PublicUsersController < ApplicationController
   end
 
   def destroy
-       PublicUser.find(params[:id]).destroy
+       @public_user.destroy
        redirect_to public_users_path, :flash=>{:success => "Пользователь удален."}
   end
 
@@ -61,7 +61,7 @@ class PublicUsersController < ApplicationController
   end
 
   def admin_user
-    public_user = PublicUser.find(params[:id])
-    redirect_to(signin_path) if !current_user.admin? || current_user?(public_user)
+    @public_user = PublicUser.find(params[:id])
+    redirect_to(signin_path) if !current_user.admin? || current_user?(@public_user)
   end
 end
