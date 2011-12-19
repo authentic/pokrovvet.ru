@@ -15,5 +15,12 @@ class Micropost < ActiveRecord::Base
 
   default_scope :order=>'microposts.created_at DESC'
 
+ #Validations
+  validates :content, :presence => true,
+            :length => {:maximum => 250}
+  validates :user_id, :presence => true,
+
+
+
 end
 
