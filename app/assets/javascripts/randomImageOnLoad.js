@@ -4,7 +4,7 @@
 		defaults: {
 
 			//you can change these defaults to your own preferences.
-			path: '/images/', //change this to the path of your images
+			path: '/assets/', //change this to the path of your images
 			myImages: ['collage2001.jpg', 'collage2005.jpg', 'collage2006.jpg', 'collage2007.jpg', 'collage2008.jpg', 'collage2008_2.jpg' ] //put image names in this bracket. ex: 'harold.jpg', 'maude.jpg', 'etc'
 
 		}

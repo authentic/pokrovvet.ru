@@ -4,7 +4,7 @@ class PublicUsersController < ApplicationController
 
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
-  before_filter :admin_user, :only => [:destroy]
+  before_filter :admin_user,   :only => [:destroy]
 
   def index
     @public_users=PublicUser.paginate(:page=>params[:page])
@@ -45,7 +45,7 @@ class PublicUsersController < ApplicationController
   end
 
   def destroy
-       @public_user = PublicUser.find(params[:id]).destroy
+       PublicUser.find(params[:id]).destroy
        redirect_to public_users_path, :flash=>{:success => "Пользователь удален."}
   end
 
