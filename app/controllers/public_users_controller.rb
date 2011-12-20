@@ -12,6 +12,7 @@ class PublicUsersController < ApplicationController
 
   def show
     @public_user= PublicUser.find(params[:id])
+    @microposts = @public_user.microposts.paginate(:page=>params[:page])
   end
 
   def new

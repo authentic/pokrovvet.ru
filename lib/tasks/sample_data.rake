@@ -18,5 +18,13 @@ namespace :db do
                          :password_confirmation=>password)
 
     end
+    PublicUser.all(:limit => 6).each do |public_user|
+      50.times do
+        public_user.microposts.create!(:content=> Faker::Lorem.sentence(5))
+
+      end
+    end
   end
 end
+
+#rake db:populate
