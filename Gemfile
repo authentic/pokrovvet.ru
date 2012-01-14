@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.1'
 
 
 # Bundle edge Rails instead:
@@ -51,8 +51,7 @@ end
 # in production environments by default.
 group :assets do
   gem 'execjs'
-    gem 'therubyracer', :platforms => :ruby
-    gem 'johnson'
+  gem 'therubyracer', :platforms => :ruby
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
