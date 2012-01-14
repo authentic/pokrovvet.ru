@@ -1,15 +1,12 @@
 class Micropost < ActiveRecord::Base
   attr_accessible :content
   belongs_to :public_user
-
-  default_scope :order => 'microposts.created_at DESC'
-
-
   #Validations
   validates :content, :presence => true,
             :length => {:maximum => 250}
-  validates :public_user_id, :presence => true,
+  validates :public_user_id, :presence => true
 
+  default_scope :order => 'microposts.created_at DESC'
 
 end
 
