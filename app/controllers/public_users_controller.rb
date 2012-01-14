@@ -1,6 +1,6 @@
 # encoding: utf-8
 class PublicUsersController < ApplicationController
-  layout 'public'
+  layout 'authentic'
 
   before_filter :authenticate, :only => [:index, :edit, :update, :destroy]
   before_filter :correct_user, :only => [:edit, :update]
@@ -52,9 +52,6 @@ class PublicUsersController < ApplicationController
 
   private
 
-  def authenticate
-    deny_access unless signed_in?
-  end
 
   def correct_user
     @public_user = PublicUser.find(params[:id])

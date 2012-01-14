@@ -1,19 +1,21 @@
-<% @page_title="Pages List" %>
-<%= link_to("<< Back to Subject List", {:controller => 'subjects', :action=> 'list'}, :class => 'back-link') %>
+# encoding: utf-8
+<% @page_title="Список страниц" %>
+<%= link_to("<< К списку разделов", {:controller => 'subjects', :action=> 'list'}, :class => 'box back-link', :box=>"yes") %>
 <div class="page list">
-  <h2>Pages</h2>
-  <%= link_to("Add New Page", {:action=>'new', :subject_id => @subject.id}, :class=>'button') %><br /> <br />
+  <h2>Страницы раздела "<%= @subject.name %>"</h2>
+  <%= link_to("Создать новую страницу", {:action=>'new', :subject_id => @subject.id}, :class=>'button') %><br /> <br />
 
-  <table class="listing" summary="Page list">
+  <table class="datatable" summary="Page list">
     <thead>
 
     <tr class="header">
-      <th>Position</th>
-      <th>Page</th>
-      <th>Visibility</th>
-      <th>Permalink</th>
-      <th>Subject</th>
-      <th>Actions</th>
+      <th>Позиция</th>
+      <th>Страница</th>
+      <th>Видимость</th>
+      <th>Постоянная ссылка</th>
+      <th>Раздел</th>
+      <th>Секции</th>
+      <th>Действия</th>
     </tr>
     </thead>
     <tbody>
@@ -24,17 +26,18 @@
           <td><%= page.name %></td>
           <td class="center"><%= status_tag(page.visible) %></td>
           <td class="center"><%= page.permalink %></td>
-          <td class="center"><%= page.subject_id %></td>
+          <td class="center"><%= page.subject.name %></td>
+           <td class="center"><%= page.sections.size %></td>
           <td class="actions">
-<%= link_to("View Sections", {:controller =>'sections', :action => 'list',:page_id => page.id}, :class => 'button') %>
-            <%= link_to("Show", {:action=>'show', :id=>page.id,:subject_id=>@subject.id}, :class=>'button') %>
-            <%= link_to("Edit", {:action=>'edit', :id=>page.id, :subject_id=>@subject.id}, :class=> 'button') %>
-            <%= link_to("Delete", {:action=>'delete', :id=>page.id, :subject_id=>@subject.id}, :class=> 'button') %>
+<%= link_to("Секции", {:controller =>'sections', :action => 'list',:page_id => page.id}, :class => 'button') %>
+            <%= link_to("Инфо", {:action=>'show', :id=>page.id,:subject_id=>@subject.id}, :class=>'button') %>
+            <%= link_to("Редактировать", {:action=>'edit', :id=>page.id, :subject_id=>@subject.id}, :class=> 'button') %>
+            <%= link_to("Удалить", {:action=>'delete', :id=>page.id, :subject_id=>@subject.id}, :class=> 'button') %>
           </td>
         </tr>
 
     <% end %>
     </tbody>
   </table>
-<div class="pluralizenote"><%= pluralize(@pages.size, 'page') %> found</div>
+   <div class="pluralizenote">Найдено: <%= @pages.size %> <%=I18n.translate :page, :count=> @pages.size %></div>
 </div>

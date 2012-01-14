@@ -1,8 +1,9 @@
 # encoding: utf-8
 class SectionsController < ApplicationController
   layout 'admin'
-
-  before_filter :confirm_logged_in
+   before_filter :authenticate
+  before_filter :admin_user
+  #before_filter :confirm_logged_in
   before_filter :find_page
 
   def index

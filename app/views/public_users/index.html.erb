@@ -1,10 +1,14 @@
 # encoding: utf-8
 <% @page_title="Зарегистрированные пользователи сайта" %>
 
-<h1>Зарегистрированные пользователи сайта</h1>
-<%= will_paginate %>
+<div class="user list">
+  <h2>Зарегистрированные пользователи сайта</h2>
 
-<ul id="userinfo">
-    <%= render @public_users %>
-  </ul>
-<%= will_paginate %>
+  <%= will_paginate %>
+
+  <ul id="userinfo">
+      <%= render @public_users %>
+    </ul>
+  <%= will_paginate %>
+
+  </div>

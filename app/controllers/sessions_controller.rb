@@ -1,9 +1,8 @@
 # encoding: utf-8
 class SessionsController < ApplicationController
-  layout 'public'
+  layout 'authentic'
 
   def new
-
   end
 
   def create
@@ -14,14 +13,12 @@ class SessionsController < ApplicationController
       render 'new'
     else
       sign_in public_user
-      redirect_back_or public_user
+      redirect_back_or root_path
     end
   end
 
   def destroy
     sing_out
     redirect_to root_path
-
-
   end
 end

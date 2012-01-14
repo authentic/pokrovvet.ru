@@ -1,23 +1,28 @@
 # encoding: utf-8
 <% @page_title="Вход" %>
-  <h1>Вход</h1>
-<%= form_for(:session, :url=>sessions_path) do |f| %>
+<div id="login" class="dialog">
+  <h2>Вход</h2>
+  <%= form_for(:session, :url=>sessions_path, :class=>"panel-body") do |f| %>
+      <fieldset>
+        <div class="field">
+          <%= f.label "Электронная почта:" %>
 
-     <div class="field">
-      <%= f.label "Электронная почта:" %><br />
-      <%= f.text_field :email %>
-    </div>
-     <div class="field">
-      <%= f.label "Пароль:" %><br />
-      <%= f.password_field :password %>
-    </div>
-       <br />
-     <div>
-      <%= f.submit "Войти", :class=>"button" %><br />
+          <%= f.text_field :email, :class=>"text", :id=>"email", :size=>"43" %>
+        </div>
+        <div class="field">
+          <%= f.label "Пароль:" %>
+          <%= f.password_field :password, :class=>"text password", :id=>"password", :size=>"43" %>
+        </div>
+      </fieldset>
+      <fieldset class="submit">
+        <div>
+          <%= f.submit "Войти", :class=>"submit" %>
+        </div>
+      </fieldset>
+  <% end %>
+</div>
 
-    </div>
 
-
-<% end %>
-
-<p>Впервые на сайте? <%= link_to "Регистрация", signup_path %></p>
+<a href="/signup" id="message">
+  Впервые на сайте? &nbsp; &nbsp; &nbsp;<span>Регистрация</span>
+</a>

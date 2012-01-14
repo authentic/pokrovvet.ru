@@ -3,7 +3,7 @@ class AdminUser < ActiveRecord::Base
   has_and_belongs_to_many :pages
    has_many :section_edits
    has_many :sections, :through => :section_edits
-
+   attr_accessible :name, :email, :password, :password_confirmation
    attr_accessor :password
 
    EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0_9.-]+\.[A-Z]{2,4}$/i

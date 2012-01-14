@@ -1,29 +1,32 @@
-<% @page_title="Admin Users List" %>
-<%= link_to("<< Back to Menu",{:controller => 'access',:action=> 'menu'}, :class => 'back-link') %>
+<% @page_title="Список пользователей" %>
+<%= link_to("<< Главное меню",{:controller => 'access',:action=> 'menu'},  :class => 'box back-link', :box=>"yes") %>
 <div class="user list">
-  <h2>Admin Users</h2>
-  <%= link_to("Add New Admin User",{:action=>'new'},:class=>'button') %><br /> <br />
+  <h2>Список пользователей</h2>
 
-  <table class="listing" summary="Admin users list"><thead>
+
+  <table class="datatable" summary="Admin users list"><thead>
     <tr class="header">
-      <th>Username</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Actions</th>
+      <th>Имя</th>
+      <th>Адрес электронной почты</th>
+      <th>Админ статус</th>
+      <th>Действия</th>
+
     </tr></thead><tbody>
     <% @admin_users.each do |admin_user| %>
     <tr class="<%= cycle('odd', 'even') %>">
-      <td><%= admin_user.username %></td>
+
       <td><%= admin_user.name %></td>
       <td><%= admin_user.email %></td>
+      <td><%= status_tag(admin_user.admin) %></td>
+
       <td class="actions">
 
-      <%= link_to("Edit",{:action=>'edit',:id=>admin_user.id},:class=> 'button') %>
-        <%= link_to("Delete",{:action=>'delete',:id=>admin_user.id},:class=> 'button') %>
+      <%= link_to("Редактировать",{:action=>'edit',:id=>admin_user.id},:class=> 'button') %>
+        <%= link_to("Удалить",{:action=>'delete',:id=>admin_user.id},:class=> 'button') %>
       </td>
     </tr>
         <% end %>
         </tbody>
   </table>
-  <div class="pluralizenote"><%= pluralize(@admin_users.size, 'admin user') %> found</div>
-</div>
+  <div class="pluralizenote">Найдено: <%= @admin_users.size %> <%=I18n.translate :admin_user, :count=> @admin_users.size %></div>
+  </div>

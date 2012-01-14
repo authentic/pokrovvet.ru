@@ -9,14 +9,14 @@ gem 'rails-i18n'
 gem 'russian'
 gem 'mysql2'
 gem "simple-navigation", "~> 3.5.0"
-gem 'ckeditor', '3.6.1'
+gem 'ckeditor','3.6.3'
 gem 'paperclip', '2.3.15'
 gem 'gravatar_image_tag', '1.0.0.pre2'
 gem 'will_paginate', '3.0.pre2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
-    gem 'jquery-rails'
+gem 'jquery-rails'
 # Deploy with Capistrano
 gem 'capistrano'
 
@@ -49,7 +49,7 @@ end
   # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   "~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  gem 'sass-rails'
+  gem 'coffee-rails'
   gem 'uglifier'
 end

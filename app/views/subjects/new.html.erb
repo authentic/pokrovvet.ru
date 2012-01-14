@@ -1,16 +1,16 @@
-<% @page_title="New Subject" %>
-<%= link_to("<< Back to Menu", {:controller => 'access', :action=> 'menu'}, :class => 'back-link') %>
-<%= link_to("<< Back to Subjects List",{:action=> 'list'}, :class => 'back-link') %>
+<% @page_title="Создание нового раздела" %>
+<%= link_to("<< Главное меню", {:controller => 'access', :action=> 'menu'}, :class => 'box back-link', :box=>"yes") %>
+<%= link_to("<< К списку разделов",{:action=> 'list'}, :class => 'box back-link', :box=>"yes") %>
 
 <div class="subject new">
-  <h2>Create Subject</h2>
+  <h2>Создание нового раздела</h2>
 
   <%= form_for(:subject, :url=>{:action=> 'create'}) do |f| %>
 
  <%= render(:partial => "form", :locals => {:f=> f}) %>
 
       <div class="button-container">
-       <%= submit_tag('Create Subject')  %>
+       <%= submit_tag('Создать раздел')  %>
       </div>
       <% end %>
 </div>

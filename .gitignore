@@ -12,3 +12,5 @@ config/database.yml
 config/mongrel_cluster.rb
 .idea
 spec
+.sass-cache/
+public/assets/

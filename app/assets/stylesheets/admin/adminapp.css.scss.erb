@@ -1,0 +1,549 @@
+
+
+/* @group Header */
+.header {
+    background: #1186f8; height: 72px;
+    text-align: center;
+    font-size: 80%;
+}
+.header h2, .header h1  {
+    margin: 0 0 0 0;
+     color:#fff;
+}
+/* @end Header */
+
+/* @group Footer */
+.footer {
+    text-align: center;
+    background: #E5ECF9;
+    color: #434141;
+    font-size: 90%;
+
+}
+
+.footer p {
+    margin: 0;
+    padding: 0.5em 0.5em;
+
+}
+/* @end Footer */
+
+   .content{min-height: 450px;}
+
+ /* Tables
+-------------------------------------------------------------- */
+
+th, td {
+    text-align: center;
+}
+
+tbody tr:nth-child(even) td, tbody tr.even td {
+    background: none;
+}
+
+thead th {
+    background: none;
+}
+
+
+.datatable {
+    font: 80%/1.5em "Lucida Grande", Geneva, "DejaVu Sans", "Bitstream Vera Sans", AnjaliOldLipi, "Lucida sans", "Trebuchet MS", Arial, Verdana;
+    border: 1px solid #a39f9b;
+    border-spacing: 0;
+    margin: 0 auto 1.5em auto;
+    width: 100%;
+
+}
+.datatable td, .datatable th {
+    border: 1px solid #a39f9b;
+}
+.datatable td{
+    padding: 1px 5px;
+}
+.datatable thead th {
+    font-size: 160%;
+    color: #fff;
+    background-color: #7E7E7E;
+    text-shadow: #6a3d37 1px 1px 1px;
+}
+
+.odd {
+    background-color: #d7eef7;
+}
+
+.even {
+    background-color: #fbe0b3;
+}
+
+/* Tables
+-------------------------------------------------------------- */
+
+/* @group Blockquotes */
+blockquote {
+    font-style: italic;
+    margin-left: 1.2857em; /* 18px */
+    margin-right: 1.2857em; /* 18px */
+}
+
+blockquote cite {
+    display: block;
+    text-align: right;
+    font-style: normal;
+}
+
+/* @end Blockquotes */
+/* @group Forms */
+/* @group Fieldsets */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 0 1.2857em 0.6428em 1.2857em; /* 0px 18px 9px 18px */
+    margin: 0 auto;
+    background: #f8f8f8;
+    width: 80%;
+}
+
+legend {
+    font-weight: bold;
+}
+
+/* @end Fieldsets */
+/* @group Labels */
+label {
+    cursor: pointer;
+}
+
+/* @end */
+/* @end Forms */
+/* @group Form controls */
+input,
+textarea,
+select,
+button {
+    font-family: inherit;
+    font-size: 1em;
+}
+
+textarea,
+input[type='text'],
+input[type='password'],
+select {
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #999;
+    border-left-color: #999;
+    border-bottom-color: #ccc;
+    border-right-color: #ccc;
+    padding: 0 1px 1px 1px;
+}
+
+textarea {
+    width: 99%;
+    display: block;
+}
+
+
+
+/* @end */
+/* @group Other elements */
+
+
+
+form .container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    vertical-align: middle;
+    padding-bottom: 0.5em; /* 7px */
+}
+
+form .container label {
+    float: left;
+    width: 23.8095%;
+    text-align: right;
+    padding-top: 0.5em; /* 7px */
+    padding-bottom: 0.5em; /* 7px */
+}
+
+form .container input,
+form .container select,
+form .container textarea {
+    float: left;
+    width: 40.7407%;
+    margin-left: 1em;
+    margin-right: 1em;
+    padding-top: 0.5em; /* 7px */
+    padding-bottom: 0.5em; /* 7px */
+}
+
+form .container textarea:focus,
+form .container input[type='text']:focus,
+form .container input[type='password']:focus,
+form .container select:focus {
+    border-color: #234;
+    background-color: #ffc;
+}
+
+form .container label em {
+    font-style: normal;
+    text-align: left;
+    display: block;
+    position: absolute;
+    right: 1%;
+    top: 0;
+    width: 28%;
+    background-color: #DEE658;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+}
+
+form .button-container {
+
+
+}
+
+form .button-container input[type='submit'] {
+    border: 1px solid #e9e9e9;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 13px 3px;
+    text-align: center;
+    -moz-text-shadow: 1px 1px 0 #fff;
+    -webkit-text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #fff;
+    white-space: nowrap;
+    background: #efefef;
+    background: -moz-linear-gradient(top, #f5f5f5 0, #efefef 50%, #e5e5e5 51%, #dfdfdf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f5f5f5', endColorstr = '#dfdfdf', GradientType = 0);
+    *border-color: #dadada;
+    *padding-bottom: 5px;
+     margin: 0 auto;
+}
+
+form .button-container input:hover,
+form .button-container input:focus {
+    border-color: #466899;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
+    -moz-text-shadow: 1px 1px 0 #222;
+    -webkit-text-shadow: 1px 1px 0 #222;
+    text-shadow: 1px 1px 0 #222;
+    background: #6396d8;
+    background: -moz-linear-gradient(top, #6396d8 0, #5a83bc 50%, #547ab7 51%, #466899 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396d8), color-stop(50%, #5a83bc), color-stop(51%, #547ab7), color-stop(100%, #466899));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#6396D8', endColorstr = '#466899', GradientType = 0)
+}
+
+form .button-container button:active {
+    background-color: #039;
+    border-top-color: #25b;
+    border-right-color: #14a;
+    border-bottom-color: #017;
+    border-left-color: #028;
+}
+
+
+
+.button {
+    border: 1px solid #e9e9e9;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 13px 3px;
+    text-align: center;
+    -moz-text-shadow: 1px 1px 0 #fff;
+    -webkit-text-shadow: 1px 1px 0 #fff;
+    text-shadow: 1px 1px 0 #fff;
+    white-space: nowrap;
+    background: #efefef;
+    background: -moz-linear-gradient(top, #f5f5f5 0, #efefef 50%, #e5e5e5 51%, #dfdfdf 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f5f5f5), color-stop(50%, #efefef), color-stop(51%, #e5e5e5), color-stop(100%, #dfdfdf));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#f5f5f5', endColorstr = '#dfdfdf', GradientType = 0);
+    *border-color: #dadada;
+    *padding-bottom: 5px;
+     margin: 0.2em 0 0.2em 0 ;
+     }
+
+.button:hover {
+    border-color: #466899;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-decoration: none;
+    -moz-text-shadow: 1px 1px 0 #222;
+    -webkit-text-shadow: 1px 1px 0 #222;
+    text-shadow: 1px 1px 0 #222;
+    background: #6396d8;
+    background: -moz-linear-gradient(top, #6396d8 0, #5a83bc 50%, #547ab7 51%, #466899 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #6396d8), color-stop(50%, #5a83bc), color-stop(51%, #547ab7), color-stop(100%, #466899));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#6396D8', endColorstr = '#466899', GradientType = 0)
+}
+a.button:link,
+a.button:visited,
+a.button:hover,
+a.button:active,
+a.button:focus
+{
+    color: #444;
+    text-decoration: none;
+}
+
+
+
+.multi-container label,
+.radio-container label,
+.checkbox-container label {
+    font-weight: normal;
+}
+
+.radio-container label,
+.checkbox-container label {
+    display: block;
+}
+
+.compact label {
+    display: inline;
+}
+
+input.short {
+    width: 4em;
+}
+
+input.medium,
+textarea.medium {
+    width: 12em;
+}
+
+input.long,
+textarea.long {
+    width: 30em;
+}
+
+button.link {
+    background-color: #fff;
+    font-weight: normal;
+}
+
+/* accessability feature, resize check and radio inputs */
+.radio-container input,
+.checkbox-container input {
+    width: 1em;
+    height: 1em;
+}
+
+.login,.edit form, .new form, .delete form {
+
+    border: none;
+    background-color: #e4f0ec;
+    margin: 1.5em;
+    padding: 1.5em;
+
+
+}
+
+/* @end */
+/* @group clear */
+.clear {
+    clear: both;
+}
+
+/* @end */
+/* @group Notifications and errors*/
+.fieldWithErrors {
+}
+
+.fieldWithErrors label {
+    color: #AA0000;
+}
+
+.fieldWithErrors input {
+}
+
+#errorExplanation {
+    width: 400px;
+    padding: 0;
+    margin: 0 auto 1.5em;
+    border: 1px solid #AA0000;
+    background-color: #FFFFFF;
+    font-size: 12px;
+}
+
+#errorExplanation h2 {
+    font-weight: bold;
+    font-size: 12px;
+    padding: 5px 5px 5px 15px;
+    margin: 0;
+    width: 380px;
+    background-color: #AA0000;
+    color: #FFFFFF;
+}
+
+#errorExplanation p {
+    color: #333333;
+    margin: 0;
+    padding: 3px 0.5em;
+}
+
+#errorExplanation ul {
+    margin-top: 0;
+}
+
+#errorExplanation ul li {
+    list-style: square;
+    margin-left: 25px;
+}
+.notice{ font-style: normal;
+    text-align: left;
+    display: block;
+    width: 28%;
+    background-color: #DEE658;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    height: 1.25em;
+    margin-bottom:0.4em;
+
+
+
+}
+
+.back-link {
+    margin: 1em 0 1em 0;
+    width: 25%;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 4px 13px 3px;
+    text-align: center;
+}
+
+.pluralizenote {
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    display: block;
+    width: 28%;
+    background-color: #ccffff;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    height: 1.25em;
+    margin-bottom:0.4em;
+}
+
+
+.identity {
+
+ text-align: left;
+    display: block;
+    height: 1.25em;
+    position: relative;
+    right:0;
+    top: 0;
+    background-color:#9ed19f;
+    border: 1px solid #fff;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+     width: 28%;
+     margin-bottom:0.4em;
+}
+
+span.status {
+    display: block;
+    width: 10px;
+    height: 10px;
+    margin: 0.25em auto;
+    padding: 0;
+    border: 1px solid #000000;
+}
+
+span.status.true {
+    background: green;
+    color: green;
+}
+
+span.status.false {
+    background: red;
+    color: red;
+}
+
+
+/* @end Notifications and errors */
+/* @group banner */
+.banner {
+    background-color: #24344A;
+    color: #fff;
+    width: 100%;
+    margin-left: -1.0714em; /* 15px */
+    padding-left: 1.0714em; /* 15px */
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+}
+
+h2.banner {
+    font-family: "Proxima Nova Condensed Regular", Calibri, "Trebuchet MS", "Gill Sans", Frutiger, Univers, "Helvetica Neue", Arial, Helvetica;
+    margin-left: -0.7143em; /* 15px */
+    padding: 0.25em 0 0.25em 0.7143em;
+    text-transform: uppercase;
+}
+
+h3.banner {
+    margin-right: -0.9375em; /* 15px */
+    padding: 0.25em 0 0.25em 0.9375em;
+}
+
+/* @end */
+/* @group photo */
+.photo {
+    background-color: #fff;
+    border: 5px solid #fff;
+    -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    -moz-box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+    box-shadow: 5px 5px 0 rgba(0, 0, 13, 0.2);
+}
+
+/* @end */
+
+.smallcaps {
+    text-transform: lowercase;
+    font-variant: small-caps;
+}
+
+/* @end */
+/*PAGE STRUCTURE ::: Layout*/
+
+
+.list h2, .edit h2, .show h2, .new h2, .delete h2 {color: #df772e; display: block; text-align: center; text-transform: uppercase;
+}
+

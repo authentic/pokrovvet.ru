@@ -1,15 +1,15 @@
-<% @page_title="New Page" %>
-<%= link_to("<< Back to Pages List", {:action=> 'list', :subject_id=>@subject.id}, :class => 'back-link') %>
+<% @page_title="Создание новой страницы" %>
+<%= link_to("<< К списку страниц", {:action=> 'list', :subject_id=>@subject.id}, :class => 'box back-link', :box=>"yes") %>
 
 <div class="page new">
-  <h2>Create Page</h2>
+  <h2>Создание новой страницы</h2>
 
   <%= form_for(:page, :url=>{:action=> 'create', :subject_id => @subject.id}) do |f| %>
 
       <%= render(:partial => "form", :locals => {:f=> f}) %>
 
       <div class="button-container">
-        <%= submit_tag('Create Page') %>
+        <%= submit_tag('Создать страницу') %>
       </div>
   <% end %>
 </div>

@@ -7,238 +7,273 @@
   <meta name="description" content="Храм Покрова Пресвятой Богородицы в хуторе Ветютнев Фроловского района Волгоградской области"/>
   <meta name="robots" content="index, nofollow"/>
   <meta name="robots" content="noarchive"/>
-  <%= render 'layouts/stylesheetsn' %>
-  <%= stylesheet_link_tag('public', :media=>'screen') %>
-  <%= stylesheet_link_tag('nivo-slider', :media=>'screen') %>
-  <%= stylesheet_link_tag('themes/default/default', :media=>'screen') %>
-  <%= javascript_include_tag "jquery.nivo.slider.pack.js" %>
- <script type="text/javascript">
-            swfobject.registerObject("csSWF", "9.0.115", "swf/Michael_archangel/expressInstall.swf");
-        </script>
+  <%= stylesheet_link_tag "application" %>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript">
+      swfobject.registerObject("csSWF", "9.0.115", "swf/Michael_archangel/expressInstall.swf");
+  </script>
 
   <script type="text/javascript">
       $(window).load(function() {
           $('#slider').nivoSlider({
-        effect:"random,sliceDown,sliceDownLeft,sliceUp,sliceUpLeft,sliceUpDown,sliceUpDownLeft,fold,fade,slideInRight,slideInLeft,boxRandom,boxRain,boxRainReverse,boxRainGrow,boxRainGrowReverse",
-        slices:15,
-        boxCols:8,
-        boxRows:4,
-        animSpeed:500,
-        pauseTime:3000,
-        startSlide:0,
-        directionNav:false,
-        directionNavHide:false,
-        controlNav:false,
-        controlNavThumbs:false,
-        controlNavThumbsFromRel:false,
-        keyboardNav:false,
-        pauseOnHover:false,
-        manualAdvance:false
-    });
+              effect:"random,sliceDown,sliceDownLeft,sliceUp,sliceUpLeft,sliceUpDown,sliceUpDownLeft,fold,fade,slideInRight,slideInLeft,boxRandom,boxRain,boxRainReverse,boxRainGrow,boxRainGrowReverse",
+              slices:15,
+              boxCols:8,
+              boxRows:4,
+              animSpeed:500,
+              pauseTime:3000,
+              startSlide:0,
+              directionNav:false,
+              directionNavHide:false,
+              controlNav:false,
+              controlNavThumbs:false,
+              controlNavThumbsFromRel:false,
+              keyboardNav:false,
+              pauseOnHover:false,
+              manualAdvance:false
+          });
       });
   </script>
 
 
 </head>
-
 <body class="yui3-skin-sam">
+<script language="Javascript" src="http://script.pravoslavie.ru/icon.php?advanced=1&href=2"></script>
 <div id="ornament-wraper" class="yui3-g">
 
-<div id="ornament-corner-TL" class="yui3-u"></div>
-<div id="ornament-top" class="yui3-u"></div>
-<div id="ornament-corner-TR" class="yui3-u"><%= image_tag('cornerRT.png', :alt=>"") %></div>
+  <div id="ornament-corner-TL" class="yui3-u"></div>
+  <div id="ornament-top" class="yui3-u"></div>
+  <div id="ornament-corner-TR" class="yui3-u"><%= image_tag('cornerRT.png', :alt=>"") %></div>
 
-<div id="hd" class="yui3-g">
-  <header>
-    <div class="yui3-u-1">
-      <div class="hd_title"><%= image_tag('title.jpg', :alt=>"") %></div>
-      <div class="slider-wrapper theme-default">
-         <div id="slider" class="nivoSlider" >
-          <%= image_tag('collage2001.jpg', :alt=>"") %>
-          <%= image_tag('collage2005.jpg', :alt=>"") %>
-          <%= image_tag('collage2006.jpg', :alt=>"") %>
-          <%= image_tag('collage2007.jpg', :alt=>"") %>
-          <%= image_tag('collage2008.jpg', :alt=>"") %>
-          <%= image_tag('collage2008_2.jpg', :alt=>"") %>
-          <%= image_tag('collage2009_1.jpg', :alt=>"") %>
-          <%= image_tag('collage2009_2.jpg', :alt=>"") %>
-          <%= image_tag('collage2009_3.jpg', :alt=>"") %>
+  <div id="hd" class="yui3-g">
+    <header>
+      <div class="yui3-u-1">
+        <div class="hd_title"><%= image_tag('title.jpg', :alt=>"") %></div>
+        <div class="slider-wrapper theme-default">
+          <div id="slider" class="nivoSlider">
+            <%= image_tag('collage2001.jpg', :alt=>"") %>
+            <%= image_tag('collage2005.jpg', :alt=>"") %>
+            <%= image_tag('collage2006.jpg', :alt=>"") %>
+            <%= image_tag('collage2007.jpg', :alt=>"") %>
+            <%= image_tag('collage2008.jpg', :alt=>"") %>
+            <%= image_tag('collage2008_2.jpg', :alt=>"") %>
+            <%= image_tag('collage2009_1.jpg', :alt=>"") %>
+            <%= image_tag('collage2009_2.jpg', :alt=>"") %>
+            <%= image_tag('collage2009_3.jpg', :alt=>"") %>
+          </div>
         </div>
-           </div>
 
-      <div class="alt hd_note"><p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская
-        епархия&nbsp;&#8727;</p></div>
+        <div class="alt hd_note"><p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская
+          епархия&nbsp;&#8727;</p></div>
 
+      </div>
+    </header>
+  </div>
+  <div class="yui3-g">
+
+    <div class="yui3-u-5-8">
+
+      <%= render_navigation(:level => 2) %>
     </div>
-  </header>
-</div>
-<div id="top_navigation" class="yui3-g">
+    <div class="yui3-u-3-8">
+      <ul id="account-nav">
+        <% if signed_in? %>
 
-      <div class="yui3-u-5-6 clearfix"><nav><%= render_navigation(:level => 2) %></nav></div>
-     <div class="yui3-u-1-6 clearfix">
-                  <ul>
-         <li><%= link_to "Главная", root_path %></li>
-                  <%if signed_in?   %>
-           <li> <%= link_to "Профиль", current_user %></li>
-                        <li> <%= link_to "Зарегистрированные пользователи", public_users_path %></li>
-              <li> <%= link_to "Изменить профиль", edit_public_user_path(current_user) %></li>
-           <% end %>
-          <li> <%= link_to "Помощь", "#" %></li>
+            <li><%= link_to "Профиль", current_user %></li>
+            <li> <%= link_to "Выход", signout_path %></li>
+ <% if current_user.admin? %>
 
-       <%if signed_in?   %>
-          <li> <%= link_to "Выход", signout_path %></li>
-           <% else %>
-          <li> <%= link_to "Вход", signin_path%></li>
-           <% end %>
-       </ul></div>
+  <li> <%= link_to "Админ", "/admin"%></li>
+      <% end %>
+        <% else %>
+            <li> <%= link_to "Вход", signin_path %></li>
+        <% end %>
+
+
+      </ul>
+    </div>
     <div></div>
   </div>
 
-<div class="yui3-g" id="layout">
+  <div class="yui3-g" id="layout">
 
-  <div class="yui3-u" id="nav">
-    <div class="content">
-      <div class="shadow-box">
-        <%= image_tag('cross.png', :alt=>"") %>
-        <p class="alt tata">
-          <b> «За молитвы Пресвятой Богородицы пусть вам Господь поможет устроить православный образ жизни для всего
-            села, для всего населения, чтобы Господь царствовал в сердце каждого из нас. А где Господь царствует, там
-            нет ни печали, ни злобы, ни воздыхания, но радость, мир и Христова любовь».<br> Митрополит Волгоградский и
-            Камышинский Герман
-          </b></p>
+    <div class="yui3-u" id="nav">
+      <div class="content">
+        <div class="shadow-box">
+          <%= image_tag('cross.png', :alt=>"") %>
+          <p class="alt tata">
+            <b> «За молитвы Пресвятой Богородицы пусть вам Господь поможет устроить православный образ жизни для всего
+              села, для всего населения, чтобы Господь царствовал в сердце каждого из нас. А где Господь царствует, там
+              нет ни печали, ни злобы, ни воздыхания, но радость, мир и Христова любовь».<br> Митрополит Волгоградский и
+              Камышинский Герман
+            </b></p>
+        </div>
+
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Объявления</h2>
+          </div>
+
+          <div class="bd">
+            <!--<ul class="examples">
+
+
+              <li data-description="Избери Жизнь">
+                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
+
+              </li>
+
+
+              <li data-description="Новости Фроловского благочиния">
+                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
+              </li>
+
+            </ul>-->
+          </div>
+        </div>
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Новости сайта</h2>
+          </div>
+
+          <div class="bd">
+            <!--  <ul class="examples">
+
+
+              <li data-description="Избери Жизнь">
+                <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
+
+              </li>
+
+
+              <li data-description="Новости Фроловского благочиния">
+                <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
+              </li>
+
+            </ul>-->
+          </div>
+        </div>
+
+         <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Погода</h2>
+          </div>
+
+          <div class="bd">
+
+       <a href="http://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*http://pogoda.yandex.ru/volgograd"><img src="http://info.weather.yandex.net/volgograd/2.ru.png" border="0" alt="Яндекс.Погода"/><img width="1" height="1" src="http://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*http://img.yandex.ru/i/pix.gif" alt="" border="0"/></a><br /><br />
+        <a href="http://clck.yandex.ru/redir/dtype=stred/pid=7/cid=1228/*http://pogoda.yandex.ru/phrolovo"><img src="http://info.weather.yandex.net/phrolovo/2.ru.png" border="0" alt="Яндекс.Погода"/><img width="1" height="1" src="http://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*http://img.yandex.ru/i/pix.gif" alt="" border="0"/></a>
+
+          </div>
+        </div>
+
+          </div>
+    </div>
+
+
+
+    <div class="yui3-u" id="main">
+      <div class="content"><%= yield %> </div>
+    </div>
+
+    <div class="yui3-u" id="extra">
+      <div class="content">
+
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Приходская газета<br> "Избери Жизнь"</h2>
+          </div>
+          <div class="bd examples">
+            <%= link_to image_tag('choose_life_january2012.jpg', :alt=>"", :class=>'sideboximage'), "/show/newspaper_choose_life", :class=>"hover-border" %>
+
+            <p> Январь №1(72) 2012г.<br>
+              <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/12/choose_life_january_2012.pdf", :target=>"_blank", :class=>'hover-border button') %>
+            </p>
+          </div>
+        </div>
+
+
+
+        <div class="sidebox">
+          <div class="hd">
+            <h2 class="no-toc">Газета "Новости Фроловского благочиния"</h2>
+          </div>
+          <div class="bd examples">
+            <%= link_to image_tag('deanery_frolovskoe_january2012.jpg', :alt=>"", :class=>'sideboximage'), "/show/newspaper_news_deanery_frolovskoe", :class=>"hover-border" %>
+
+
+            <p> Январь №1(4) 2012г.<br>
+              <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/13/deanery_frolovskoe_january_2012.pdf", :target=>"_blank", :class=>'hover-border button') %>
+            </p>
+          </div>
+        </div>
+
+        <div class="sidebox">
+                <div class="hd">
+                  <h2 class="no-toc">Икона дня</h2>
+                </div>
+                <div class="bd examples">
+
+
+
+                 <script language="Javascript">print_img();</script>
+               <h5><script language="Javascript">print_podpis();</script></h5>
+                </div>
+              </div>
+
+         <!-- Informer www.calend.ru --><a href="http://www.calend.ru/holidays/orthodox/" target="_blank"><img src="http://www.calend.ru/img/export/informer_2.png" width="150" alt="Православные праздники" border=0></a><!-- // Informer www.calend.ru -->
       </div>
-
-
-      <div class="sidebox">
-        <div class="hd">
-          <h2 class="no-toc">Объявления</h2>
-        </div>
-
-        <div class="bd">
-          <!--<ul class="examples">
-
-
-            <li data-description="Избери Жизнь">
-              <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
-
-            </li>
-
-
-            <li data-description="Новости Фроловского благочиния">
-              <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
-            </li>
-
-          </ul>-->
-        </div>
-      </div>
-
-      <div class="sidebox">
-        <div class="hd">
-          <h2 class="no-toc">Новости сайта</h2>
-        </div>
-
-        <div class="bd">
-          <!--  <ul class="examples">
-
-
-            <li data-description="Избери Жизнь">
-              <a class="hover-border" href="../node-menunav/menunav-leftnav.html">Избери Жизнь</a>
-
-            </li>
-
-
-            <li data-description="Новости Фроловского благочиния">
-              <a href="../node-menunav/node-menunav-2.html">Новости Фроловского благочиния</a>
-            </li>
-
-          </ul>-->
-        </div>
-      </div>
-
     </div>
   </div>
 
-  <div class="yui3-u" id="main">
-    <div class="content"><%= yield %> </div>
-  </div>
-
-  <div class="yui3-u" id="extra">
-    <div class="content">
-
-
-      <div class="sidebox">
-        <div class="hd">
-          <h2 class="no-toc">Приходская газета<br> "Избери Жизнь"</h2>
-        </div>
-        <div class="bd examples">
-              <%=link_to image_tag('choose_life_december2011.jpg', :alt=>"", :class=>'sideboximage'),"/show/newspaper_choose_life", :class=>"hover-border"  %>
-
-          <p> Декабрь (№71) 2011г.<br>
-            <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/6/choose_life_december2011.pdf", :target=>"_blank", :class=>'hover-border button') %>
-            </p>
-        </div>
-      </div>
-      <div class="sidebox">
-        <div class="hd">
-          <h2 class="no-toc">Газета "Новости Фроловского благочиния"</h2>
-        </div>
-        <div class="bd examples">
-           <%=link_to image_tag('deanery_frolovskoe_december2011.jpg', :alt=>"", :class=>'sideboximage'),"/show/newspaper_news_deanery_frolovskoe", :class=>"hover-border"  %>
-
-
-          <p> Декабрь (№3) 2011г.<br>
-            <%= link_to("Скачать (pdf)", "/ckeditor_assets/attachments/5/deanery_frolovskoe_december2011.pdf", :target=>"_blank", :class=>'hover-border button') %>
+  <div id="ft">
+    <div class="yui3-g">
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.pravoslavie.ru/" target="_blank"><img class="aligncenter" src="http://pravoslavie.ru/images/banners/b100x100a.jpg" alt="Православие.Ru" width="100" height="100" border="0"/></a>
           </p>
         </div>
       </div>
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.e-vestnik.ru/" target="_blank"><img class="aligncenter" src="http://www.e-vestnik.ru/img/banners2/100x100_w.gif" alt="Церковный вестник" border="0"/></a>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1-4">
+        <div class="content">
+          <p>
+            <a href="http://www.hristianstvo.ru/?from=http://volgeparhia.ru/" target="_blank"><img class="aligncenter" title="Православное христианство.ru" src="http://www.hristianstvo.ru/images/sr-100x100-native1.gif" alt="" width="100" height="100" border="0"/></a><br/>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1-4">
+        <div class="content  ">
+          <p>
+            <a href="http://www.patriarchia.ru/index.html" target="_blank"><img class="aligncenter" src="http://www.patriarchia.ru/images/patr_banner_100.gif" alt="Официальный сайт Русской Православной Церкви / Патриархия.ru" width="100" height="100" border="0"/></a>
+          </p>
+        </div>
+      </div>
+      <div class="yui3-u-1">
+        <div class="content newwindow">
+          <p class="small">2011-
+            <% t=Time.now %><%= t.year %>. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской
+            епархии Русской Православной
+            Церкви. <br /> <b>Адрес:</b> 403520, Волгоградская область, Фроловский район, хутор Ветютнев. <b>E-mail:</b> bastion18@yandex.ru <br /><b>Телефон настоятеля:</b> +7-917-838-99-28 — священник Аркадий Власов.</p> <%= image_tag('page_end.png', :alt=>"") %>
+        </div>
+      </div>
 
     </div>
   </div>
-</div>
 
-<div id="ft">
-  <div class="yui3-g">
-    <div class="yui3-u-1-4">
-      <div class="content">
-        <p>
-          <a href="http://www.pravoslavie.ru/" target="_blank"><img class="aligncenter" src="http://pravoslavie.ru/images/banners/b100x100a.jpg" alt="Православие.Ru" width="100" height="100" border="0"/></a>
-        </p>
-      </div>
-    </div>
-    <div class="yui3-u-1-4">
-      <div class="content">
-        <p>
-          <a href="http://www.e-vestnik.ru/" target="_blank"><img class="aligncenter" src="http://www.e-vestnik.ru/img/banners2/100x100_w.gif" alt="Церковный вестник" border="0"/></a>
-        </p>
-      </div>
-    </div>
-    <div class="yui3-u-1-4">
-      <div class="content">
-        <p>
-          <a href="http://www.hristianstvo.ru/?from=http://volgeparhia.ru/" target="_blank"><img class="aligncenter" title="Православное христианство.ru" src="http://www.hristianstvo.ru/images/sr-100x100-native1.gif" alt="" width="100" height="100" border="0"/></a><br/>
-        </p>
-      </div>
-    </div>
-    <div class="yui3-u-1-4">
-      <div class="content  ">
-        <p>
-          <a href="http://www.patriarchia.ru/index.html" target="_blank"><img class="aligncenter" src="http://www.patriarchia.ru/images/patr_banner_100.gif" alt="Официальный сайт Русской Православной Церкви / Патриархия.ru" width="100" height="100" border="0"/></a>
-        </p>
-      </div>
-    </div>
-    <div class="yui3-u-1">
-      <div class="content newwindow">
-        <p>2011. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской епархии Русской Православной
-          Церкви.</p><%= image_tag('page_end.png', :alt=>"") %>
-      </div>
-    </div>
-
-  </div>
-</div>
-
-<div id="ornament-corner-BL" class="yui3-u"></div>
-<div id="ornament-footer" class="yui3-u"></div>
-<div id="ornament-corner-BR" class="yui3-u"></div>
+  <div id="ornament-corner-BL" class="yui3-u"></div>
+  <div id="ornament-footer" class="yui3-u"></div>
+  <div id="ornament-corner-BR" class="yui3-u"></div>
 </div>
 
 

@@ -6,4 +6,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
+//= require jquery.nivo.slider.pack
+//= require randomImageOnLoad
+//= require swfobject
+//= require cloud-zoom.1.0.2
+//= require jquery.corner
+

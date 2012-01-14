@@ -6,4 +6,38 @@ ru:
     few: "ошибок"
     many: "ошибок"
     other: "ошибок"
+  section:
+    zero: "секций"
+    one: "секция"
+    few: "секции"
+    many: "секций"
+    other: "секций"
+  subject:
+    zero: "разделов"
+    one: "раздел"
+    few: "раздела"
+    many: "разделов"
+    other: "разделов"
+  page:
+    zero: "страниц"
+    one: "страница"
+    few: "страницы"
+    many: "страниц"
+    other: "страниц"
+  admin_user:
+    zero: "пользователей"
+    one: "пользователь"
+    few: "пользователя"
+    many: "пользователей"
+    other: "пользователей"
+
+  activerecord:
+    models:
+      public_user:
+    attributes:
+          public_user:
+            name: "Имя"
+            email: "Адрес электронной почты"
+            password: "Пароль"
+
 

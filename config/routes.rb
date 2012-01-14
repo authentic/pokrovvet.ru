@@ -1,19 +1,16 @@
 PokrovvetRu::Application.routes.draw do
 
-
+  root :to => "home#index"
   resources :public_users
   resources :sessions, :only=>[:new, :create, :destroy]
-
-
-  root :to => "home#index"
-
+  resources :microposts, :only=>[:create, :destroy]
   match 'admin', :to=> 'access#menu'
   match 'show/:id', :to => 'public#show'
   match '/signup', :to =>'public_users#new'
   match '/signin', :to =>'sessions#new'
   match '/signout', :to=>'sessions#destroy'
   Rails.application.routes.draw do
-     namespace :ckeditor, :only => [:index, :create, :destroy] do
+    namespace :ckeditor, :only => [:index, :create, :destroy] do
       resources :pictures
       resources :attachment_files
     end
@@ -67,8 +64,8 @@ PokrovvetRu::Application.routes.draw do
   #   end
 
   # You can have the root of your site routed with "root"
-  # just remember to delete public/index_old.html.
-  # root :to => "welcome#index"
+  # just remember to delete public/index.html.
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 

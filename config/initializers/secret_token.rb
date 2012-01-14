@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-PokrovvetRu::Application.config.secret_token = 'be5f340d0b37a8f4a133bf3d74396c20873c1b18047b6396752beaa0b4a516466fd8e3a21420feade56d728b5f64099fb601e31963527af394b30466154552ad'
+PokrovvetRu::Application.config.secret_token = 'd904684c3d7fca86fa7b4fe2236adac548cb592f749e155ddd287aa946a55841f10421befb9f5d4b84cb5f3c312c0d6e3ac0d446faf8bc530c7c8e62adfbf3ad'

@@ -12,7 +12,7 @@ class PublicController < ApplicationController
 
     @page=Page.where(:permalink=>params[:id], :visible => true).first
     redirect_to(:controller => "home", :action => 'index') unless @page
-
+    @micropost= Micropost.new if signed_in?
 
   end
 

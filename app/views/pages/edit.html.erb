@@ -1,15 +1,15 @@
-<% @page_title="Edit Page" %>
-<%= link_to("<< Back to Pages List", {:action=> 'list', :subject_id=>@subject.id}, :class => 'back-link') %>
+<% @page_title="Редактирование страницы" %>
+<%= link_to("<< К списку страниц", {:action=> 'list', :subject_id=>@subject.id}, :class => 'box back-link', :box=>"yes") %>
 
 <div class="page edit">
-  <h2>Update Page</h2>
+  <h2>Редактирование страницы "<%= @page.name %>"</h2>
 
   <%= form_for(:page, :url=>{:action=> 'update', :id=> @page.id,:subject_id=>@subject.id}) do |f| %>
 
        <%= render(:partial => "form", :locals => {:f=> f}) %>
 
       <div class="button-container">
-        <%= submit_tag('Update Page') %>
+        <%= submit_tag('Сохранить изменения') %>
       </div>
   <% end %>
 </div>

@@ -1,15 +1,15 @@
-<% @page_title="Edit Section" %>
-<%= link_to("<< Back to Sections List",{:action=> 'list', :page_id => @page.id}, :class => 'back-link') %>
+<% @page_title="Редактирование секции" %>
+<%= link_to("<< К списку секций",{:action=> 'list', :page_id => @page.id}, :class => 'box back-link', :box=>"yes") %>
 
 <div class="section edit">
-  <h2>Update Section</h2>
+  <h2>Редактирование секции "<%= @section.name %>"</h2>
 
   <%= form_for(:section, :url=>{:action=> 'update', :id=> @section.id, :page_id => @page.id
   }) do |f| %>
 
  <%= render(:partial => "form", :locals => {:f=> f}) %>
       <div class="button-container">
-       <%= submit_tag('Update Section')  %>
+       <%= submit_tag('Сохранить изменения')  %>
       </div>
       <% end %>
 </div>

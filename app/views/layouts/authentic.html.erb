@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Храм Покрова Пресвятой Богородицы (Казачий хутор Ветютнев)::: <%= @page_title || '' %> </title>
+  <%= csrf_meta_tag %>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Храм Покрова Пресвятой Богородицы в хуторе Ветютнев Фроловского района Волгоградской области"/>
+  <meta name="robots" content="index, nofollow"/>
+  <meta name="robots" content="noarchive"/>
+  <%= stylesheet_link_tag "authentic" %>
+  <%= javascript_include_tag "authentic" %>
+
+</head>
+<body class="yui3-skin-sam">
+<div id="ornament-wraper" class="yui3-g">
+  <div id="ornament-corner-TL" class="yui3-u"></div>
+  <div id="ornament-top" class="yui3-u"></div>
+  <div id="ornament-corner-TR" class="yui3-u"><%= image_tag('cornerRT.png', :alt=>"") %></div>
+
+  <div id="hd" class="yui3-g">
+    <header>
+      <div class="yui3-u-1">
+        <div class="hd_title"> <br />
+          <%= link_to image_tag('title.jpg', :alt=>""), "/", :class=>"hover-border" %>  </div>
+        <div class="alt hd_note"><p>&#8727;&nbsp;Русская Православная Церковь&nbsp;&#8727;&nbsp;Московский Патриархат&nbsp;&#8727;&nbsp;Волгоградская
+          епархия&nbsp;&#8727;</p></div>
+      </div>
+    </header>
+  </div>
+
+  <div class="yui3-g" id="layout">
+
+    <div class="yui3-u" id="main">
+      <div class="content">   <% flash.each do |key, value| %>
+            <div class="notice <%= key %>"><%= value %></div>
+        <% end %>
+
+        <%= yield %> </div>
+    </div>
+
+  </div>
+
+  <div id="ornament-corner-BL" class="yui3-u"></div>
+  <div id="ornament-footer" class="yui3-u"></div>
+  <div id="ornament-corner-BR" class="yui3-u"></div>
+</div>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,8 +1,9 @@
 # encoding: utf-8
 class SubjectsController < ApplicationController
   layout 'admin'
-  before_filter :confirm_logged_in
-
+  #before_filter :confirm_logged_in
+   before_filter :authenticate
+  before_filter :admin_user
   def index
     list
     render('list')

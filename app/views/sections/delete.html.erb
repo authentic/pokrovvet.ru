@@ -1,14 +1,12 @@
-<% @page_title = "Delete Section: #{@section.name}" %>
-<%= link_to("<< Back to Sections List", {:action => 'list', :page_id => @page.id}, :class => 'back-link') %>
+<% @page_title = "Удаление секции: #{@section.name}" %>
+<%= link_to("<< К списку секций", {:action => 'list', :page_id => @page.id}, :class => 'box back-link', :box=>"yes") %>
 <div class="section delete">
-  <h2>Delete Section</h2>
+  <h2>Удаление секции "<%= @section.name %>"</h2>
   <%= form_for(:section, :url => {:action => 'destroy', :id=> @section.id, :page_id => @page.id}) do |f| %>
-      <p class="smallcaps">Are you sure you want to permanently delete this section?</p>
-
-      <p class="reference-name"><%= @section.name %></p>
+      <p class="large alert">Вы уверенны что хотите удалить секцию "<%= @section.name %>"?</p>
 
       <div class="button-container">
-        <%= submit_tag("Delete Section") %>
+        <%= submit_tag("Удалить секцию") %>
       </div>
       </div>
   <% end %>

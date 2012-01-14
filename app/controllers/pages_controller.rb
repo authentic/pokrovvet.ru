@@ -1,7 +1,9 @@
 # encoding: utf-8
 class PagesController < ApplicationController
   layout 'admin'
-  before_filter :confirm_logged_in
+   before_filter :authenticate
+    before_filter :admin_user
+ # before_filter :confirm_logged_in
   before_filter :find_subject
 
 
@@ -92,7 +94,9 @@ class PagesController < ApplicationController
     end
   end
 
-
+   def admin_user
+    redirect_to(signin_path) if !current_user.admin? || current_user?(@public_user)
+  end
 
 
 end

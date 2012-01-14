@@ -1,5 +1,16 @@
 <% @page_title=@public_user.name %>
+  <ul id="account-nav">
+        <% if signed_in? %>
 
+              <li><%= link_to "Главная", root_path %></li>
+              <li> <%= link_to "Изменить профиль", edit_public_user_path(current_user) %></li>
+              <li> <%= link_to "Выход", signout_path %></li>
+
+            <!--  <li> <%= link_to "Зарегистрированные пользователи", public_users_path %></li>-->
+        <% else %>
+            <li> <%= link_to "Вход", signin_path %></li>
+        <% end %>
+      </ul>
 <table class="profile" summary="Profile information">
   <tr>
     <td class="main">
@@ -17,9 +28,9 @@
           <% end %>
     </td>
     <td class="sidebar round">
-      <strong>Name</strong> <%= @public_user.name %><br />
-      <strong>URL</strong>  <%= link_to public_users_path(@public_user), public_users_path(@public_user) %>
-      <strong>Microposts</strong> <%= @public_user.microposts.count %>
+      <b>Имя:</b> <%= @public_user.name %><br />
+      <b>URL:</b>  <%= link_to public_users_path(@public_user), public_users_path(@public_user) %>
+      <b>Microposts:</b> <%= @public_user.microposts.count %>
     </td>
   </tr>
 </table>

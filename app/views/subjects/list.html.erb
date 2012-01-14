@@ -1,19 +1,19 @@
-<% @page_title="Subjects List" %>
-<%= link_to("<< Back to Menu", {:controller => 'access', :action=> 'menu'}, :class => 'back-link') %>
+<% @page_title="Список разделов" %>
+<%= link_to("<< Главное меню", {:controller => 'access', :action=> 'menu'}, :class => 'box back-link', :box=>"yes") %>
 <div class="subject list">
-  <h2>Subjects</h2>
+  <h2>Разделы сайта</h2>
 
- <%= link_to("Add New Subject", {:action=>'new'}, :class=>'button') %>
+ <%= link_to("Создать новый раздел", {:action=>'new'}, :class=>'button') %>
   <br /> <br />
 
-  <table class="listing" summary="Subject list">
+  <table class="datatable" summary="Subject list">
     <thead>
     <tr class="header">
-      <th>Position</th>
-      <th>Subject</th>
-      <th>Visibility</th>
-      <th>Pages</th>
-      <th>Actions</th>
+      <th>Позиция</th>
+      <th>Раздел</th>
+      <th>Видимость</th>
+      <th>Количество страниц</th>
+      <th>Действия</th>
     </tr>
     </thead>
     <tbody>
@@ -24,15 +24,14 @@
           <td class="center"><%= status_tag(subject.visible) %></td>
           <td class="center"><%= subject.pages.size %></td>
           <td class="actions">
-            <%= link_to("View Pages", {:controller =>'pages', :action => 'list',:subject_id => subject.id}, :class => 'button') %>
-
-            <%= link_to("Show", {:action=>'show', :id=>subject.id}, :class=>'button') %>
-            <%= link_to("Edit", {:action=>'edit', :id=>subject.id}, :class=> 'button') %>
-            <%= link_to("Delete", {:action=>'delete', :id=>subject.id}, :class=> 'button') %>
+            <%= link_to("Страницы", {:controller =>'pages', :action => 'list',:subject_id => subject.id}, :class => 'button') %>
+            <%= link_to("Инфо", {:action=>'show', :id=>subject.id}, :class=>'button') %>
+            <%= link_to("Редактировать", {:action=>'edit', :id=>subject.id}, :class=> 'button') %>
+            <%= link_to("Удалить", {:action=>'delete', :id=>subject.id}, :class=> 'button') %>
           </td>
         </tr>
     <% end %>
     </tbody>
   </table>
-   <div class="pluralizenote"><%= pluralize(@subjects.size, 'subject') %> found</div>
+   <div class="pluralizenote">Найдено: <%= @subjects.size %> <%=I18n.translate :subject, :count=> @subjects.size %></div>
 </div>

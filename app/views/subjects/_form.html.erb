@@ -1,10 +1,10 @@
 <%= error_messages_for(@subject) %>
 
-     <div class="container"><%= f.label(:name) %>
+     <div class="container"><%= f.label("Название раздела") %>
      <%= f.text_field(:name) %></div>
 
-     <div class="container"><%= f.label(:position)%>
+     <div class="container"><%= f.label("Позиция")%>
    <%= f.select(:position, 1..@subject_count) %></div>
 
-     <div class="container"><%= f.label(:visible)%>
+     <div class="container"><%= f.label("Видимость")%>
      <%= f.check_box(:visible) %></div>

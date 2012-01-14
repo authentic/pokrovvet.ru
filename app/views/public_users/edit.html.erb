@@ -1,16 +1,35 @@
 # encoding: utf-8
 <% @page_title="Настройки учетной записи" %>
-<h1>Редактировать настройки учетной записи.</h1>
-<%= form_for(@public_user) do |f| %>
+<ul id="account-nav">
+        <% if signed_in? %>
 
-    <%= render(:partial => "fields", :locals => {:f=> f}) %>
-     <div>
-      <%= f.submit "Сохранить изменения", :class=>"button" %><br />
+              <li><%= link_to "Главная", root_path %></li>
+               <li><%= link_to "Профиль", current_user %></li>
+              <li> <%= link_to "Выход", signout_path %></li>
 
-    </div>
-<% end %>
-  <br />
-<div class="">
-  <%= gravatar_for @public_user %>  <br />
-   <%= link_to "Изменить граватар", "http://ru.gravatar.com", :target=>"_blank", :class=>''%>
+            <!--  <li> <%= link_to "Зарегистрированные пользователи", public_users_path %></li>-->
+        <% else %>
+            <li> <%= link_to "Вход", signin_path %></li>
+        <% end %>
+      </ul> <br />
+<div class="dialog">
+  <h2>Редактировать настройки учетной записи</h2>
+  <%= form_for(@public_user) do |f| %>
+       <%= render 'shared/error_messages', :object => f.object %>
+      <%= render(:partial => "fields", :locals => {:f=> f}) %>
+
+      <fieldset class="submit">
+        <div>
+          <%= f.submit "Сохранить изменения", :class=>"submit" %>
+
+        </div>
+      </fieldset>
+
+  <% end %>
+
+</div>    <br/>
+<div class="dialog"><h2>Изменить граватар</h2> <fieldset class="submit">
+ <%= gravatar_for @public_user %>  <br/> <br/>
+  <%= link_to "Изменить граватар", "http://ru.gravatar.com", :target=>"_blank", :class=>'button' %>
+   </fieldset>
 </div>

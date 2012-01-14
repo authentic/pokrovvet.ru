@@ -1,12 +1,17 @@
 # encoding: utf-8
 <% @page_title="Регистрация" %>
-<h1>Регистрация</h1>
-<%= form_for(@public_user) do |f| %>
-    <%= render(:partial => "fields", :locals => {:f=> f}) %>
-    <div>
-      <%= f.submit "Зарегистрироваться", :class=>"button" %>
-      <br/>
-    </div>
-
-
-<% end %>
+<div class="dialog">
+  <h2>Регистрация</h2>
+  <%= form_for(@public_user) do |f| %>
+      <%= render 'shared/error_messages', :object => f.object %>
+      <%= render(:partial => "fields", :locals => {:f=> f}) %>
+      <fieldset class="submit">
+        <div>
+          <%= f.submit "Зарегистрироваться", :class=>"submit" %>
+        </div>
+      </fieldset>
+  <% end %>
+</div>
+<a href="/signin" id="message">
+  Вы уже зарегистрированы? &nbsp; &nbsp; &nbsp;<span> Вход</span>
+</a>
