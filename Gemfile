@@ -19,6 +19,7 @@ gem 'will_paginate', '3.0.pre2'
 gem 'jquery-rails'
 # Deploy with Capistrano
 gem 'capistrano'
+gem 'json'
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
@@ -49,6 +50,9 @@ end
   # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
+  gem 'execjs'
+    gem 'therubyracer', :platforms => :ruby
+    gem 'johnson'
   gem 'sass-rails'
   gem 'coffee-rails'
   gem 'uglifier'
