@@ -1,12 +1,9 @@
 <% @page_title="Информация о секции" %>
-
 <%= link_to("<< К списку секций", {:action=>'list', :page_id => @page.id}, :class => 'box back-link', :box=>"yes") %>
-<%= link_to("<< К списку страниц",{:controller => 'pages',:action=> 'list', :subject_id => @page.subject_id}, :class => 'box back-link', :box=>"yes") %>
+<%= link_to("<< К списку страниц", {:controller => 'pages', :action=> 'list', :subject_id => @page.subject_id}, :class => 'box back-link', :box=>"yes") %>
 <%= link_to("<< К списку разделов", {:controller => 'subjects', :action=> 'list'}, :class => 'box back-link', :box=>"yes") %>
-
 <div class="section show">
- <h2>Информация о секции "<%= @section.name %>"</h2>
-
+  <h2>Информация о секции "<%= @section.name %>"</h2>
   <table class="datatable" summary="Section detail view">
     <tbody></tbody>
     <tr>
@@ -23,10 +20,8 @@
     </tr>
     <tr>
       <th>Страница</th>
-
-        <td><%= @section.page.name %></td>
+      <td><%= @section.page.name %></td>
     </tr>
-
     <tr>
       <th>Тип содержимого</th>
       <td><%= @section.content_type %></td>

@@ -1,13 +1,9 @@
 <% @page_title="Создание нового администратора" %>
 <%= link_to("<< К списку администраторов", {:action=> 'list'}, :class => 'box back-link', :box=>"yes") %>
-
 <div class="admin user new">
   <h2>Создание нового администратора</h2>
-
   <%= form_for(:admin_user, :url=>{:action=> 'create'}) do |f| %>
-
       <%= render(:partial => "form", :locals => {:f=> f}) %>
-
       <div class="button-container">
         <%= submit_tag('Создать администратора') %>
       </div>

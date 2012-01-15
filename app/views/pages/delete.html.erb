@@ -1,7 +1,5 @@
-# encoding: utf-8
 <% @page_title="Удаление страницы" %>
 <%= link_to("<< К списку страниц", {:action => 'list', :subject_id=>@subject.id}, :class => 'box back-link', :box=>"yes") %>
-
 <div class="page delete">
   <h2>Удаление страницы "<%= @page.name %>"</h2>
   <%= form_for(:page, :url => {:action => 'destroy', :id => @page.id, :subject_id=>@subject.id}) do |f| %>

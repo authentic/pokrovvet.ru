@@ -1,18 +1,12 @@
-# encoding: utf-8
 <% @page_title="Редактирование пользователя: #{@admin_user.name}" %>
 <%= link_to("<< К списку пользователей", {:action=> 'list'}, :class => 'box back-link', :box=>"yes") %>
-
 <div class="user edit">
-  <h2>Редактирование пользователя "<%=@admin_user.name%>"</h2>
-
+  <h2>Редактирование пользователя "<%= @admin_user.name %>"</h2>
   <%= form_for(:admin_user, :url=>{:action=> 'update', :id=> @admin_user.id
   }) do |f| %>
       <%= error_messages_for(@admin_user) %>
-
       <%= render(:partial => "form", :locals => {:f=> f}) %>
-
       <div class="button-container">
-
         <%= f.submit('Сохранить изменения') %>
       </div>
   <% end %>

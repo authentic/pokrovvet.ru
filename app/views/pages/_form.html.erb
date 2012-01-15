@@ -1,14 +1,11 @@
 <%= error_messages_for(@page) %>
-
-<div class="container"><%= f.label(:subject_id, "Раздел")%>
-    <%= f.select(:subject_id, @subjects.collect {|s| [s.name, s.id]}) %></div>
-
-   <div class="container"><%= f.label("Имя страницы")%>
-    <%= f.text_field(:name) %></div>
-
-    <div class="container"><%= f.label("Постоянная ссылка")%>
-    <%= f.text_field(:permalink) %></div>
-    <div class="container"><%= f.label("Позиция")%>
-    <%= f.select(:position, 1..@page_count) %></div>
-    <div class="container"><%= f.label("Видимость")%>
-    <%= f.check_box(:visible) %></div>
+<div class="container"><%= f.label(:subject_id, "Раздел") %>
+  <%= f.select(:subject_id, @subjects.collect { |s| [s.name, s.id] }) %></div>
+<div class="container"><%= f.label("Имя страницы") %>
+  <%= f.text_field(:name) %></div>
+<div class="container"><%= f.label("Постоянная ссылка") %>
+  <%= f.text_field(:permalink) %></div>
+<div class="container"><%= f.label("Позиция") %>
+  <%= f.select(:position, 1..@page_count) %></div>
+<div class="container"><%= f.label("Видимость") %>
+  <%= f.check_box(:visible) %></div>

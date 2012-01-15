@@ -1,17 +1,15 @@
 <% @page_title=@page.name %>
-<div class="shadow-box"><div class="hd"><h1 class="alt"><%= @page.name.html_safe %></h1></div>
-
-<% @page.sections.visible.sorted.each do |section| %>
-
-<section class="<%=section.name%>">
-       <% case section.content_type
-       when 'HTML' %>
-         <%= (section.content).html_safe %>
-    <% when 'text' %>
-        <p><%= section.content %></p>
-    <% end %>
-  </section>
-<% end %>
-
- </div>
+<div class="shadow-box">
+  <div class="hd"><h1 class="alt"><%= @page.name.html_safe %></h1></div>
+  <% @page.sections.visible.sorted.each do |section| %>
+      <section class="<%= section.name %>">
+        <% case section.content_type
+               when 'HTML' %>
+            <%= (section.content).html_safe %>
+        <% when 'text' %>
+            <p><%= section.content %></p>
+        <% end %>
+      </section>
+  <% end %>
+</div>
 

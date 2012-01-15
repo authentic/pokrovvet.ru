@@ -2,10 +2,8 @@
 <%= link_to("<< Главное меню", {:controller => 'access', :action=> 'menu'}, :class => 'box back-link', :box=>"yes") %>
 <div class="subject list">
   <h2>Разделы сайта</h2>
-
- <%= link_to("Создать новый раздел", {:action=>'new'}, :class=>'button') %>
-  <br /> <br />
-
+  <%= link_to("Создать новый раздел", {:action=>'new'}, :class=>'button') %>
+  <br/> <br/>
   <table class="datatable" summary="Subject list">
     <thead>
     <tr class="header">
@@ -24,7 +22,7 @@
           <td class="center"><%= status_tag(subject.visible) %></td>
           <td class="center"><%= subject.pages.size %></td>
           <td class="actions">
-            <%= link_to("Страницы", {:controller =>'pages', :action => 'list',:subject_id => subject.id}, :class => 'button') %>
+            <%= link_to("Страницы", {:controller =>'pages', :action => 'list', :subject_id => subject.id}, :class => 'button') %>
             <%= link_to("Инфо", {:action=>'show', :id=>subject.id}, :class=>'button') %>
             <%= link_to("Редактировать", {:action=>'edit', :id=>subject.id}, :class=> 'button') %>
             <%= link_to("Удалить", {:action=>'delete', :id=>subject.id}, :class=> 'button') %>
@@ -33,5 +31,5 @@
     <% end %>
     </tbody>
   </table>
-   <div class="pluralizenote">Найдено: <%= @subjects.size %> <%=I18n.translate :subject, :count=> @subjects.size %></div>
+  <div class="pluralizenote">Найдено: <%= @subjects.size %> <%= I18n.translate :subject, :count=> @subjects.size %></div>
 </div>

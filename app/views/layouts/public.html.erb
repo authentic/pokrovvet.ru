@@ -21,19 +21,14 @@
       });
   </script>
 </head>
-
 <body class="yui3-skin-sam">
 <script language="Javascript" src="http://script.pravoslavie.ru/icon.php?advanced=1&href=2"></script>
 <div id="ornament-wraper" class="yui3-g">
-
   <div id="ornament-corner-TL" class="yui3-u"></div>
   <div id="ornament-top" class="yui3-u"></div>
   <div id="ornament-corner-TR" class="yui3-u"><%= image_tag('cornerRT.png', :alt=>"") %></div>
-
   <div id="hd" class="yui3-g">
-
     <header>
-
       <div class="yui3-u-1">
         <div class="hd_title"><%= image_tag('title.jpg', :alt=>"") %></div>
         <div id="slider"><img class="shuffle" src="" alt="">
@@ -42,52 +37,43 @@
           епархия&nbsp;&#8727;</p></div>
       </div>
     </header>
-
   </div>
-
   <div class="yui3-g">
-
     <div class="yui3-u-5-8">
       <%= render_navigation(:level => 2) %>
     </div>
     <div class="yui3-u-3-8">
       <ul id="account-nav">
-          <% if signed_in? %>
+        <% if signed_in? %>
             <li><%= link_to "Профиль", current_user %></li>
             <li> <%= link_to "Выход", signout_path %></li>
             <% if current_user.admin? %>
-
-  <li> <%= link_to "Админ", "/admin"%></li>
-      <% end %>
-          <% else %>
+                <li> <%= link_to "Админ", "/admin" %></li>
+            <% end %>
+        <% else %>
             <li> <%= link_to "Вход", signin_path %></li>
         <% end %>
       </ul>
     </div>
     <div></div>
   </div>
-
   <div class="yui3-g" id="layoutpub">
-
     <div class="yui3-u" id="navpub">
       <div class="content">
         <div id="sub_navigation" class="shadow-box"> <%= render_navigation(:level => 3..4) %></div>
-
-         <div class="sidebox">
+        <div class="sidebox">
           <div class="hd">
             <h2 class="no-toc">Икона дня</h2>
           </div>
           <div class="bd examples">
-           <script language="Javascript">print_img();</script>
-               <h5><script language="Javascript">print_podpis();</script></h5>
+            <script language="Javascript">print_img();</script>
+            <h5>
+              <script language="Javascript">print_podpis();</script>
+            </h5>
           </div>
         </div>
-
-            <!-- Informer www.calend.ru --><a href="http://www.calend.ru/holidays/orthodox/" target="_blank"><img src="http://www.calend.ru/img/export/informer_2.png" width="150" alt="Православные праздники" border=0></a><!-- // Informer www.calend.ru -->
-
       </div>
     </div>
-
     <div class="yui3-u" id="mainpub">
       <div class="content">
         <div id="breadcrumbs" class="yui3-u-1">
@@ -99,17 +85,13 @@
         <%= yield %>
         <h2>Комментарии читателей:</h2>
         <% if signed_in? %>
-         <%= render 'pages/signed_in' %>
+            <%= render 'pages/signed_in' %>
         <% else %>
-        <%= render 'pages/not_signed_in' %>
+            <%= render 'pages/not_signed_in' %>
         <% end %>
       </div>
-
     </div>
-
-
   </div>
-
   <div id="ft">
     <div class="yui3-g">
       <div class="yui3-u-1-4">
@@ -145,20 +127,17 @@
           <p class="small">2011-
             <% t=Time.now %><%= t.year %>. Храм Покрова Пресвятой Богородицы. Фроловское благочиние Волгоградской
             епархии Русской Православной
-            Церкви. <br /> <b>Адрес:</b> 403520, Волгоградская область, Фроловский район, хутор Ветютнев. <b>E-mail:</b> bastion18@yandex.ru <br /><b>Телефон настоятеля:</b> +7-917-838-99-28 — священник Аркадий Власов.</p> <%= image_tag('page_end.png', :alt=>"") %>
+            Церкви. <br/> <b>Адрес:</b> 403520, Волгоградская область, Фроловский район, хутор Ветютнев. <b>E-mail:</b>
+            bastion18@yandex.ru <br/><b>Телефон настоятеля:</b> +7-917-838-99-28 — священник Аркадий Власов.
+          </p> <%= image_tag('page_end.png', :alt=>"") %>
         </div>
       </div>
-
     </div>
   </div>
-
-
   <div id="ornament-corner-BL" class="yui3-u"></div>
   <div id="ornament-footer" class="yui3-u"></div>
   <div id="ornament-corner-BR" class="yui3-u"></div>
 </div>
-
-
 </body>
 </html>
 
