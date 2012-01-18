@@ -1,21 +1,36 @@
 <% @page_title="Админ меню" %>
-  <hr class="space"/>
+<hr class="space"/>
 
 <div class="span-9 box" box="yes"><%= link_to("Управление информацией", :controller => 'subjects', :class=>'button') %>
   <ul>
     <li>создание разделов сайта</li>
     <li>добавление, редактирование и удаление страниц</li>
     <li>ввод и редактирование информации</li>
-    </ul>
+  </ul>
 </div>
-<div class="span-6 box" box="yes"><%= link_to("Управление пользовательями", :controller => 'admin_users') %> <ul>
+<div class="span-6 box" box="yes"><%= link_to("Управление пользовательями", :controller => 'admin_users') %>
+  <ul>
     <li>Редактирование и удаление пользователей(зарегестрированных посетителей) сайта</li>
 
-  </ul></div>
-<div class="span-6 box last" box="yes">на сайт:<hr class="space"/><%= link_to("pokrovvet.ru", root_path) %><hr class="space"/><hr class="space"/></div>
+  </ul>
+</div>
+<div class="span-6 box last" box="yes">на сайт:
+  <hr class="space"/><%= link_to("pokrovvet.ru", root_path) %>
+  <hr class="space"/>
+  <hr class="space"/>
+</div>
 
 
 
-<div class="span-6 box last" box="yes">вы вошли как:  <%= current_user.name %> <br />id: <%= session[:public_user_id] %> <hr class="space"/><%= link_to("Выход", signout_path) %><hr class="space"/><hr class="space"/></div>
+<div class="span-6 box" box="yes">вы вошли как:  <%= current_user.name %> <br/>id: <%= session[:public_user_id] %>
+  <hr class="space"/><%= link_to("Выход", signout_path) %>
+  <hr class="space"/>
+  <hr class="space"/>
+</div>
 
+<div class="span-6 box" box="yes">Просмотр и анализа данных по трафику:
+  <hr class="space"/><%= link_to("Google Analytics", "https://www.google.com/analytics/web/#report/visitors-overview/a28312193w54075303p54966516/", :target=>"_blank") %>
+  <hr class="space"/>
+  <hr class="space"/>
+</div>
 

@@ -7,6 +7,7 @@ SimpleNavigation::Configuration.run do |navigation|
         sub_nav.item :khutor_vetjutnev, 'Казачий хутор Ветютнев', '/show/khutor_vetjutnev'
         sub_nav.item :church_of_the_protection_of_the_Most_Holy_Theotokos, 'Храм Покрова Пресвятой Богородицы', '/show/church_of_the_protection_of_the_Most_Holy_Theotokos'
         sub_nav.item :church_of_Our_Lady_of_the_Don, 'Храм Донской иконы Божией Матери', '/show/church_of_Our_Lady_of_the_Don'
+        sub_nav.item :military_patriotic_club, 'Православно-патриотический клуб', '/show/military_patriotic_club'
       end
       primary.item :our_parish, 'Наш приход', '/show/our_parish' do |sub_nav|
         sub_nav.item :news, 'События прихода', '/show/news'
@@ -36,7 +37,7 @@ SimpleNavigation::Configuration.run do |navigation|
           sub_sub_nav.item :recipes, 'Рецепты православной кухни', '/show/recipes'
 
         end
-        sub_nav.item :military_patriotic_club, 'Военно-патриотический клуб', '/show/military_patriotic_club'
+
         sub_nav.item :collector, 'Коллекционер', '/show/collector'
       end
       primary.item :deanery_frolovskoe, 'Фроловское благочиние', '/show/deanery_frolovskoe' do |sub_nav|
